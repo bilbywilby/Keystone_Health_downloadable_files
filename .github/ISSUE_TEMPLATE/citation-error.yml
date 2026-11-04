@@ -1,0 +1,24 @@
+name: "❗ Citation Accuracy Report"
+description: "Report incorrect or outdated legal citations"
+labels: ["citation-audit", "high-priority"]
+body:
+  - type: markdown
+    attributes:
+      value: "Report citation errors that may affect dispute letter effectiveness"
+  - type: input
+    id: citation
+    attributes:
+      label: "Incorrect Citation"
+      description: "What citation appears wrong?"
+      placeholder: "e.g., '45 C.F.R. § 149.210'"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidence of Error"
+      description: "Link to correct source"
+      placeholder: "https://www.ecfr.gov/current/title-45/part-149/section-149.410"
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Impact Severity"
+      options: ["Critical - blocks dispute", "High - may cause rejection", "Medium - clarifying", "Low - typo"]
