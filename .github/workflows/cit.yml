@@ -1,0 +1,41 @@
+# .github/workflows/cit.yml
+name: Citation Integrity Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * MON"  # Weekly automated check
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      
+      - name: Install dependencies
+        run: |
+          pip install pytest pandas python-dateutil requests
+      
+      - name: Run citation accuracy tests
+        run: |
+          pytest tests/test_citation_accuracy.py -v
+      
+      - name: Validate CSV schema
+        run: |
+          pytest tests/test_csv_validity.py -v
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            junit.xml
+            coverage/
