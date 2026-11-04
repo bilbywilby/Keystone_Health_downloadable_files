@@ -1,0 +1,30 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0] - 2026-11-04
+
+### Added
+- Complete dispute letter templates (provider, insurer, collector)
+- CSV tracking matrix for Excel/Google Sheets
+- Python automation script for deadline reminders
+- Multi-format downloads (TXT, DOCX-ready, PDF-ready)
+- Comprehensive documentation (`DISCLAIMER.md`, `CONTRIBUTING.md`, `SETUP_GUIDE.md`)
+- Sample filled templates with anonymized data
+- Interactive escalation timeline workflow
+
+### Changed
+- Removed unverifiable "Pennsylvania Act 252" claims
+- Removed incorrect "Senate Bill 1071" citations
+- Updated to verified federal No Surprises Act citations only
+- Restructured letter sections for improved readability
+- Clarified IDR process (insurer-provider, not patient-involved)
+
+### Fixed
+- Corrected 45 C.F.R. § 149.510 to broader Subpart G reference
+- Adjusted collection hold language (request vs. mandate)
+- Fixed citation formatting consistency
+- Updated PA Insurance Department contact information
