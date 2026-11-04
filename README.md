@@ -1,3 +1,700 @@
+📂 README.md (Main Repository README)
+
+```markdown
+# Keystone Health No Surprises Act Dispute Toolkit
+
+**Pennsylvania Medical Debt Defense Resources — Verified Legal Templates & Automation Tools**
+
+> ⚠️ **Not Legal Advice** — These templates are for informational purposes only. Consult qualified legal counsel for significant disputes.
+
+![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-Nov%202026-blue.svg)
+![Pennsylvania](https://img.shields.io/badge/Jurisdiction-Pennsylvania-orange.svg)
+
+---
+
+## 🎯 What This Toolkit Does
+
+This repository provides **verified, citation-checked templates** and tools to help Pennsylvania residents dispute illegal surprise medical bills under the federal **No Surprises Act** (effective January 2022).
+
+### Includes:
+
+| Component | Description | Format |
+|-----------|-------------|--------|
+| **Provider Dispute Letter** | Challenge balance bills at hospital/facility level | TXT, DOCX-ready |
+| **Insurer Companion Letter** | Request claim reprocessing at in-network rates | TXT, DOCX-ready |
+| **Collector Escalation Letter** | FCEUA/FDCPA enforcement (if in collections) | TXT, DOCX-ready |
+| **Timeline Tracker** | Track all phases, deadlines, and confirmations | CSV (Excel/Sheets) |
+| **Automation Script** | Daily email reminders for approaching deadlines | Python |
+
+---
+
+## ⚡ Quick Start
+
+1. **Download** → [Download ZIP](https://github.com/bilbywilby/Keystone_Health_downloadable_files/archive/main.zip) or `git clone`
+2. **Import Tracker** → Open `spreadsheets/csv/dispute_tracker.csv` in Excel/Google Sheets
+3. **Customize Letters** → Edit bracketed fields in `templates/txt/`
+4. **Send via Certified Mail** → USPS Return Receipt Required
+5. **Track Progress** → Update spreadsheet daily
+6. **Escalate if Needed** → File PID/CMS complaints after Day 30
+
+📖 **Detailed Setup:** See [`docs/SETUP_GUIDE.md`](docs/SETUP_GUIDE.md)  
+⏱️ **Workflow Overview:** See [`QUICK_START.md`](QUICK_START.md)
+
+---
+
+## 📋 Citation Verification Table
+
+All legal citations in these templates are verified against **primary sources**:
+
+| Citation | Source | Verified |
+|----------|--------|----------|
+| 45 C.F.R. Part 149 | Federal Register (Final Rule) | ✅ |
+| PHSA § 2799A-1 (42 U.S.C. § 300gg-41) | CMS.gov | ✅ |
+| PHSA § 2799A-2 (42 U.S.C. § 300gg-42) | CMS.gov | ✅ |
+| PHSA § 2799A-3 (42 U.S.C. § 300gg-43) | CMS.gov | ✅ |
+| 73 P.S. § 2270.1 et seq. (FCEUA) | PA General Assembly | ✅ |
+| 42 Pa.C.S. § 5525 (Statute of Limitations) | PA General Assembly | ✅ |
+| 15 U.S.C. § 1692g (FDCPA) | Cornell LII | ✅ |
+
+**Removed from earlier versions:**
+- ❌ "Pennsylvania Act 252 (2023)" — **unverifiable**
+- ❌ "Pa. Stat. § 28-725" — **cannot find this statute**
+- ❌ "Senate Bill 1071" — **wrong bill (appropriations)**
+
+See [`CHANGELOG.md`](CHANGELOG.md) for version history.
+
+---
+
+## 📁 Repository Structure
+
+```
+Keystone_Health_downloadable_files/
+├── LICENSE                    # CC BY-NC-SA 4.0 license terms
+├── DISCLAIMER.md              # Legal disclaimer (READ FIRST)
+├── CONTRIBUTING.md            # Contribution guidelines
+├── CHANGELOG.md               # Version history
+├── README.md                  # This file
+├── QUICK_START.md             # Condensed setup checklist
+│
+├── docs/
+│   ├── SETUP_GUIDE.md         # Detailed installation & config
+│   └── USAGE_EXAMPLES.md      # Scenario walkthroughs
+│
+├── templates/
+│   ├── txt/                   # Plain text (monospace) versions
+│   │   ├── PROVIDER_DISPUTE_LETTER.txt
+│   │   ├── INSURER_COMPANION_LETTER.txt
+│   │   └── COLLECTION_AGENCY_ESCALATION_LETTER.txt
+│   │
+│   ├── docx/                  # Word-compatible formatted versions
+│   └── pdf-ready/             # Print-optimized Markdown
+│
+├── spreadsheets/
+│   └── csv/
+│       └── no_surprises_dispute_tracker.csv
+│
+├── automation/
+│   └── python/
+│       ├── nsa_dispute_reminder.py
+│       └── requirements.txt
+│
+└── examples/
+    └── sample_filled/         # Anonymized completed examples
+```
+
+---
+
+## 📜 License
+
+**Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**
+
+You are free to:
+- ✓ Share — copy and redistribute
+- ✓ Adapt — remix, transform, and build upon
+
+Under the following conditions:
+- **Attribution** — Give appropriate credit
+- **NonCommercial** — Do not use for commercial purposes
+- **ShareAlike** — License derivatives under same terms
+
+See [`LICENSE`](LICENSE) for full terms.
+
+---
+
+## ⚖️ Important Disclaimers
+
+### Not Legal Advice
+These templates are for informational purposes only and do not constitute legal advice. No attorney-client relationship is formed.
+
+### Individual Circumstances Vary
+Your situation may differ from these templates. Consult a Pennsylvania-licensed attorney for:
+- Amounts exceeding **$5,000**
+- Active collection lawsuits
+- Wage garnishment or liens
+- Credit damage already occurred
+
+### Regulatory Changes
+Laws change. Verify citations against current primary sources before relying on them.
+
+**Last updated:** November 4, 2026
+
+---
+
+## 🆘 Need Help?
+
+### For Template Questions
+- Open an **issue** on GitHub
+- Check [`docs/USAGE_EXAMPLES.md`](docs/USAGE_EXAMPLES.md)
+
+### For Legal Assistance
+- **Pennsylvania Legal Aid Network:** https://palawhelp.org
+- **Community Legal Services of Philadelphia:** https://clsphila.org
+- **Pennsylvania Bar Association Lawyer Referral:** https://www.pabar.org
+
+### For Regulatory Complaints
+- **Pennsylvania Insurance Department:** https://www.pa.gov/agencies/insurance/ | 1-800-789-7366
+- **CMS No Surprises Help Desk:** https://www.cms.gov/nosurprises | 1-800-985-3059
+
+---
+
+## 🙏 Acknowledgments
+
+This toolkit synthesizes:
+- Federal No Surprises Act regulations (45 C.F.R. Part 149)
+- Pennsylvania Insurance Department consumer guidance
+- Pennsylvania Fair Credit Extension Uniformity Act (FCEUA)
+- Public advocacy resources on surprise billing
+
+Special thanks to consumer advocates who documented NSA enforcement patterns and dispute strategies.
+
+---
+
+## 📢 Spread the Word
+
+If these templates helped you:
+1. Star this repository ⭐
+2. Share with others facing surprise bills
+3. Contribute improvements (see [`CONTRIBUTING.md`](CONTRIBUTING.md))
+
+---
+
+**Remember:** Stay organized. Document everything. You have federal rights—use them.
+```
+
+---
+
+## 11. 📄 QUICK_START.md
+
+```markdown
+# Quick Start Checklist — Keystone Health Dispute Toolkit
+
+Complete this checklist step-by-step. Estimated time: **30 minutes** for setup, **2-3 days** for mailing.
+
+---
+
+## ✅ Phase 0: Preparation (Day -1)
+
+- [ ] Gather disputed bill copy
+- [ ] Gather Explanation of Benefits (EOB)
+- [ ] Locate in-network facility proof (if available)
+- [ ] Set up USPS Certified Mail account (or visit post office)
+- [ ] Create folder: `Keystone_Dispute_[YOUR_INITIALS]/`
+
+---
+
+## ✅ Phase 1: Import & Customize (Day 0)
+
+### Step A: Load Tracking Spreadsheet
+- [ ] Open `spreadsheets/csv/no_surprises_dispute_tracker.csv`
+- [ ] Import to Google Sheets or Excel
+- [ ] Enter today's date in "Target Date" column for Day 0 items
+- [ ] Save as `[YOUR_NAME]_Dispute_Tracker.xlsx`
+
+### Step B: Customize Provider Dispute Letter
+- [ ] Open `templates/txt/PROVIDER_DISPUTE_LETTER.txt`
+- [ ] Fill ALL `[BRACKETED FIELDS]`
+- [ ] **Select ONE option in Section 1** (delete the other two):
+  - [ ] Option A — Emergency Services
+  - [ ] Option B — Out-of-Network Provider at In-Network Facility
+  - [ ] Option C — Air Ambulance
+- [ ] Review for accuracy
+- [ ] Save as `Provider_Dispute_[DATE].txt`
+
+### Step C: Customize Insurer Companion Letter
+- [ ] Open `templates/txt/INSURER_COMPANION_LETTER.txt`
+- [ ] Fill ALL `[BRACKETED FIELDS]`
+- [ ] Match info to Provider Dispute letter
+- [ ] Review for accuracy
+- [ ] Save as `Insurer_Companion_[DATE].txt`
+
+---
+
+## ✅ Phase 2: Print & Mail (Day 0)
+
+### Step A: Print Letters
+- [ ] Print 2 copies of Provider Dispute Letter
+- [ ] Print 2 copies of Insurer Companion Letter
+- [ ] Sign both original copies with **blue or black ink**
+
+### Step B: Assemble Envelopes
+**Envelope 1 (Provider):**
+- [ ] Original signed Provider Dispute Letter
+- [ ] Copy of disputed bill
+- [ ] Copy of EOB
+- [ ] Copy of in-network facility proof (if any)
+
+**Envelope 2 (Insurer):**
+- [ ] Original signed Insurer Companion Letter
+- [ ] Copy of disputed bill
+- [ ] Copy of EOB
+
+### Step C: USPS Certified Mail
+- [ ] Go to post office (or schedule pickup)
+- [ ] Request "Certified Mail with Return Receipt Requested"
+- [ ] Pay fee (~$4-7 per letter)
+- [ ] Get tracking numbers
+- [ ] Log tracking numbers in spreadsheet
+- [ ] File green return receipt cards when received
+
+---
+
+## ✅ Phase 3: Monitoring (Days 1-30)
+
+### Week 1
+- [ ] Confirm delivery (track USPS tracking online)
+- [ ] Log delivery date in spreadsheet
+- [ ] Wait for response
+
+### Week 2-3
+- [ ] If no response by Day 20, send polite follow-up email/call
+- [ ] Log follow-up attempt in spreadsheet
+
+### Week 4
+- [ ] Day 30: Provider response window expires TODAY
+- [ ] Check mail/email for written response
+- [ ] **If NO response received:** Proceed to Day 31 actions
+
+---
+
+## ✅ Phase 4: Regulatory Escalation (Day 31+)
+
+If provider hasn't resolved by Day 30:
+
+### Step A: File PA Insurance Department Complaint
+- [ ] Go to https://www.pa.gov/agencies/insurance/
+- [ ] Navigate to Consumer Complaints
+- [ ] Upload: Bill, EOB, Dispute Letter copy, USPS tracking proof
+- [ ] Save complaint confirmation number
+- [ ] Log in spreadsheet: `PID Complaint #[NUMBER]`
+
+### Step B: File CMS Help Desk Complaint
+- [ ] Go to https://www.cms.gov/nosurprises
+- [ ] Navigate to "File a Complaint"
+- [ ] Upload same documentation
+- [ ] Save ticket confirmation number
+- [ ] Log in spreadsheet: `CMS Ticket #[NUMBER]`
+
+---
+
+## ✅ Phase 5: Closeout (Day 60-90)
+
+### Day 60
+- [ ] Request written confirmation of $0 balance from provider
+- [ ] Verify adjusted statement received
+- [ ] Log "Zero Balance Confirmation" date
+
+### Day 75
+- [ ] Pull credit reports (all 3 bureaus): www.annualcreditreport.com
+- [ ] Verify NO negative marking for this account
+- [ ] Take screenshots for records
+
+### Day 90
+- [ ] Scan all physical documents
+- [ ] Store digitally in encrypted cloud backup
+- [ ] Keep originals in fireproof safe
+- [ ] Mark case as "CLOSED" in spreadsheet
+
+---
+
+## 🚨 Red Flags — When to Call a Lawyer
+
+Contact an attorney immediately if:
+
+- ⚠️ Lawsuit filed against you
+- ⚠️ Wage garnishment ordered
+- ⚠️ Property lien placed
+- ⚠️ Negative credit reporting despite FCEUA dispute
+- ⚠️ Debt amount exceeds $10,000
+- ⚠️ Multiple providers/facilities involved
+
+**Resources:**
+- Pennsylvania Legal Aid: https://palawhelp.org
+- CLS Philadelphia: https://clsphila.org
+
+---
+
+## 📞 Emergency Contacts
+
+| Organization | Phone | Website |
+|--------------|-------|---------|
+| PA Insurance Dept | 1-800-789-7366 | pa.gov/agencies/insurance |
+| CMS No Surprises | 1-800-985-3059 | cms.gov/nosurprises |
+| CFPB Complaint | 1-855-411-2372 | consumerfinance.gov/complaint |
+| PA Legal Aid | Varies | palawhelp.org |
+
+---
+
+## ✉️ Pro Tips
+
+1. **Document EVERYTHING** — Log every call with date, time, name, outcome
+2. **Use Certified Mail** — Creates legal proof of delivery
+3. **Don't make partial payments** — May restart statute of limitations clock
+4. **Respond within 30 days** — Missed deadlines can hurt leverage
+5. **Keep emotions in check** — Stick to facts in all communications
+6. **Copy everything** — Digital + physical backups
+7. **Escalate on schedule** — Don't let provider drag out timeline
+
+---
+
+**You've got this. Stay systematic, stay persistent.**
+
+_Last Updated: November 4, 2026_
+```
+
+---
+
+## 12. 📘 docs/USAGE_EXAMPLES.md
+
+```markdown
+# Usage Examples — Real-World Scenarios
+
+This document provides anonymized examples showing how to apply these templates in common situations.
+
+---
+
+## Example 1: Emergency Room Surprise Billing
+
+### Situation
+Patient goes to in-network hospital emergency room for chest pain. Treatment is completed. Later receives separate bill from **out-of-network emergency physician** for $3,400 beyond in-network deductible.
+
+### Applicable Protection
+**No Surprises Act § 2799A-1 (Emergency Services)**
+
+### Template Selection
+- ✅ Provider Dispute Letter — **Option A** (Emergency Services)
+- ✅ Insurer Companion Letter
+- ❌ Collection Letter (not yet in collections)
+
+### Key Fields to Fill
+```
+OPTION A — EMERGENCY SERVICES
+    I received emergency care at [HOSPITAL NAME] on [DATE].
+    The emergency physician was out-of-network without my consent.
+    ...
+    Disputed Amount: $3,400.00
+```
+
+### Expected Outcome
+Physician balance bill should be eliminated. Patient pays only in-network ER copay/deductible.
+
+---
+
+## Example 2: Scheduled Surgery Assistant Surgeon
+
+### Situation
+Patient schedules knee replacement at in-network hospital. Surgeon is in-network, but **assistant surgeon** billed separately as out-of-network for $1,850.
+
+### Applicable Protection
+**No Surprises Act § 2799A-2 (Ancillary Services at In-Network Facility)**
+
+### Template Selection
+- ✅ Provider Dispute Letter — **Option B** (Out-of-Network Provider at In-Network Facility)
+- ✅ Insurer Companion Letter
+- ❌ Collection Letter (not yet in collections)
+
+### Key Fields to Fill
+```
+OPTION B — OUT-OF-NETWORK PROVIDER AT IN-NETWORK FACILITY
+    I scheduled surgery at [HOSPITAL NAME], which is in-network.
+    The assistant surgeon was out-of-network without written consent.
+    ...
+    Facility: [IN-NETWORK HOSPITAL NAME]
+    Rendering Provider: [OUT-OF-NETWORK ASSISTANT SURGEON]
+```
+
+### Expected Outcome
+Assistant surgeon balance bill should be reduced to in-network coinsurance rate.
+
+---
+
+## Example 3: Anesthesiologist Balance Bill After C-Section
+
+### Situation
+Mother delivers baby at in-network hospital. Anesthesiologist (epidural provider) sends balance bill for $2,100. Never disclosed out-of-network status.
+
+### Applicable Protection
+**No Surprises Act § 2799A-2 (Ancillary Services)**
+
+### Template Selection
+- ✅ Provider Dispute Letter — **Option B**
+- ✅ Insurer Companion Letter
+- ⚠️ Collection Letter — only if anesthesiologist sells debt to collector
+
+### Common Pitfall
+Many patients assume obstetrician manages all providers. **Anesthesiologists, radiologists, pathologists, and assistant surgeons are typically independent contractors** who may be out-of-network even at in-network hospitals.
+
+### Key Fields to Fill
+```
+OPTION B
+    Facility: [IN-NETWORK LABOR & DELIVERY HOSPITAL]
+    Rendering Provider: [ANESTHESIOLOGY GROUP NAME]
+    Service: Epidural anesthesia during cesarean section
+    Did NOT receive out-of-network disclosure at intake
+    Did NOT sign waiver of protections
+```
+
+### Timeline
+- Day 0: Send both letters
+- Day 30: Follow up if no response
+- Day 31: File PID + CMS complaints
+- Day 60: Expect zero balance confirmation
+
+---
+
+## Example 4: Air Ambulance Surprise Bill
+
+### Situation
+Car accident victim airlifted from rural area to trauma center. Receives balance bill from air ambulance company for $18,500.
+
+### Applicable Protection
+**No Surprises Act § 2799A-3 (Air Ambulance Services)**
+
+### Template Selection
+- ✅ Provider Dispute Letter — **Option C** (Air Ambulance)
+- ✅ Insurer Companion Letter
+- ⚠️ Collection Letter — air ambulance companies sometimes sell debts aggressively
+
+### Why This Works
+Air ambulance balance billing is **explicitly prohibited** under federal law with no carve-outs for notice-and-consent waivers.
+
+### Key Fields to Fill
+```
+OPTION C — AIR AMULANCE SERVICE
+    Service: Air ambulance transport from [ACCIDENT SITE] to [TRAUMA CENTER]
+    Date: [DATE OF ACCIDENT]
+    Disputed Amount: $18,500.00
+    No in-network/out-of-network distinction applies to air ambulance
+```
+
+### Expected Outcome
+Full balance bill elimination. Patient responsible only for in-network air ambulance cost-sharing (typically higher than ground ambulance).
+
+---
+
+## Example 5: Debt Moved to Collections
+
+### Situation
+Patient ignored initial balance bill for 45 days. Now collection agency calls demanding $2,200. Credit report shows "collections account opened."
+
+### Immediate Actions
+1. **Stop verbal communication** — all must be in writing
+2. **Send Collection Agency Escalation Letter immediately**
+3. **Notify original provider** that debt is disputed and in collections
+4. **File credit bureau disputes** if already reported
+
+### Template Selection
+- ✅ Provider Dispute Letter (send again if never responded to)
+- ✅ Insurer Companion Letter (if never sent)
+- ✅ **Collection Agency Escalation Letter** — **CRITICAL NOW**
+
+### FCEUA Leverage Points
+```
+SECTION 2 — PENNSYLVANIA FCEUA REQUIREMENTS
+  • Report account as "disputed" to credit bureaus (73 P.S. § 2270.4(a))
+  • Cannot threaten negative reporting while dispute active (73 P.S. § 2270.4(b))
+  • Harassment prohibited (73 P.S. § 2270.3)
+```
+
+### FDCPA Leverage Points
+```
+SECTION 3 — FEDERAL FAIR DEBT COLLECTION PRACTICES ACT
+  • 30-day validation window (15 U.S.C. § 1692g)
+  • Must cease communications until verification provided
+  • False/misleading representations prohibited (15 U.S.C. § 1692e)
+```
+
+### Credit Repair Steps
+1. Send collection letter via certified mail
+2. Wait 30 days for validation
+3. If none provided: demand deletion from credit bureaus
+4. If validated but NSA applies: demand deletion based on unlawful debt
+5. If refused: file CFPB complaint + consider lawsuit
+
+### Documentation Checklist
+- [ ] Copy of original bill
+- [ ] Copy of EOB
+- [ ] Copy of prior dispute letters to provider
+- [ ] Collection agency contact log (dates, names, what was said)
+- [ ] Credit report screenshot showing negative entry
+
+---
+
+## Example 6: Insurance Denies NSA Coverage
+
+### Situation
+Provider rebuffs dispute. Patient's insurer responds: "We determined this claim does not qualify under No Surprises Act due to [EXCEPTION]."
+
+### Next Steps
+1. **Request written explanation** of specific exception
+2. **Verify if exception actually applies** (common mistakes happen)
+3. **Appeal internally** through insurer's appeals process
+4. **External review** through PA Insurance Department if upheld
+5. **File CMS complaint** for potential NSA violation by insurer
+
+### Common Insurer Exceptions (And Counter-Arguments)
+
+| Insurer Claim | Reality Check |
+|---------------|---------------|
+| "Patient signed consent waiver" | Waiver must be **written, specific timing rules apply, certain services exempt** |
+| "Ground ambulance excluded" | True — FAA doesn't cover ground ambulance. Different laws apply. |
+| "Post-stabilization services" | NSA has special rules; provider must offer transfer to in-network if medically appropriate |
+| "Out-of-network facility chosen knowingly" | Only applies if **facility itself** out-of-network, not ancillary providers |
+
+### Appeal Letter Framework
+```
+RE: Internal Appeal — Denial of No Surprises Act Protections
+
+I am appealing your denial of NSA protections for claim #[CLAIM NUMBER].
+
+Your reason: "[QUOTE THEIR EXACT DENIAL LANGUAGE]"
+
+Counter-argument:
+[Explain why this exception does not apply to your situation with specific citations]
+
+Supporting evidence:
+• Attached: Original dispute letters
+• Attached: Facility in-network verification
+• Attached: No signed consent waiver (or flawed waiver)
+• Attached: Timeline of communications
+
+I request reversal within 30 days per your appeal process.
+If upheld, I will request external review via PA Insurance Department.
+```
+
+---
+
+## Example 7: Multiple Providers, One Incident
+
+### Situation
+Car accident victim treated at multiple facilities: ER at Hospital A, transferred to Hospital B for surgery, later billed by radiologist, anesthesiologist, assistant surgeon, and transport company.
+
+### Strategy
+**Consolidate all disputes** into coordinated campaign:
+
+1. Create master tracking spreadsheet with all claims
+2. Send dispute letters to ALL providers on same Day 0
+3. Notify insurer all claims are connected
+4. File joint PID/CMS complaints referencing all providers
+5. Escalate collectively if any refuse
+
+### Coordination Letter Language
+```
+NOTE: This dispute is part of a larger multi-provider surprise billing 
+incident occurring on [DATE] from [INCIDENT DESCRIPTION]. 
+
+Related providers also disputing balance bills:
+• [PROVIDER 2 NAME] — Account #[NUMBER]
+• [PROVIDER 3 NAME] — Account #[NUMBER]
+• [PROVIDER 4 NAME] — Account #[NUMBER]
+
+All claims involve identical No Surprises Act violations. Please coordinate 
+resolution with my insurer, which has received companion notices for all 
+providers.
+```
+
+### Advantages
+- Prevents providers from "passing the buck"
+- Creates economies of scale for regulatory agencies
+- Leverage multiplier effect (more complaints = more attention)
+
+---
+
+## Example 8: Self-Pay Patient (No Insurance)
+
+### Situation
+Patient without health insurance receives surgery. Charged $12,000 cash price. Provider refuses to discount. Patient discovers they should have received Good Faith Estimate.
+
+### Applicable Protections
+**No Surprises Act — Good Faith Estimate Requirements (Uninsured/Self-Pay)**
+
+### Different Template Needed
+Self-pay patients have separate dispute rights under **45 C.F.R. § 149.610** (Good Faith Estimate process). This toolkit focuses on **insured patients** under traditional NSA balance billing protections.
+
+### Recommended Actions
+1. Request Good Faith Estimate retroactively
+2. If actual charge exceeded estimate by $400+, initiate federal dispute process
+3. Check hospital 501(r) financial assistance requirements
+4. Apply for charity care if income qualifies
+
+### Note
+Self-pay dispute process differs significantly from insured patient process. Consult specialized resources for Good Faith Estimate enforcement.
+
+---
+
+## Frequently Asked Questions
+
+### Q: Can I use these letters if I have Medicare/Medicaid?
+**A:** No. Medicare and Medicaid patients have different protections (they're already prohibited from balance billing under those programs). These templates target **commercial/private insurance** plans.
+
+### Q: What if I partially paid before discovering NSA protections?
+**A:** Partial payment **may restart statute of limitations** under 42 Pa.C.S. § 5525. Still send dispute letter but acknowledge payment made. Consider consulting attorney about tolling implications.
+
+### Q: Can I modify the templates for my situation?
+**A:** Yes! License permits adaptation (CC BY-NC-SA). Just maintain attribution and share derivatives under same license.
+
+### Q: How long do I keep records?
+**A:** Minimum **4 years** (PA statute of limitations on medical debt). Recommended: **7 years** for credit reporting cycle coverage.
+
+### Q: What if provider sues me?
+**A:** **Call a lawyer immediately.** These templates help prevent litigation but don't provide courtroom defense. Many consumer attorneys take cases like this on contingency.
+
+---
+
+## Success Metrics
+
+Track these KPIs in your spreadsheet:
+
+| Metric | Target | Notes |
+|--------|--------|-------|
+| Provider response time | ≤30 days | Federal best practice |
+| Balance reduction | 100% | Full rescission ideal |
+| Insurance reprocessing | ≤45 days | Internal appeal window |
+| PID complaint resolution | ≤60 days | Agency typical timeline |
+| Credit clearance | ≤90 days | Bureau investigation cycle |
+
+---
+
+Need help adapting these examples? Open a discussion on GitHub or consult a Pennsylvania consumer attorney for complex cases.
+```
+
+---
+
+## 13. 📋 templates/docx/.gitkeep (Placeholder for Word Files)
+
+Since GitHub doesn't store binary .docx files well in some workflows, create a `.gitkeep` file to preserve the directory structure:
+
+```
+# Placeholder file to preserve directory structure
+# Actual .docx files should be downloaded as Word documents
+# Convert from TXT templates using:
+# 1. Copy content from templates/txt/*.txt
+# 2. Paste into Microsoft Word or Google Docs
+# 3. Format with standard fonts (Arial/Times New Roman, 11pt)
+# 4. Add proper spacing, headers, and signature blocks
+# 5. Save as .docx in this directory
+```
+
 ---
 
 ## 1. CSV Tracking Matrix (Copy & Save as `.csv`)
