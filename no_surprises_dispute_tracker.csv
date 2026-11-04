@@ -1,0 +1,19 @@
+Phase,Milestone / Action Item,Target Date,Date Completed,Status / Notes,Reference / Confirmation #,Assigned To,Due Date Alert
+Phase 1,"Issue Dispute Letter to Facility/Provider (Certified Mail)","YYYY-MM-DD","YYYY-MM-DD","[Sent / Pending Receipt]","Certified Mail Tracking #: ____________",Self,Day 0
+Phase 1,"Issue Companion Letter to Insurer / Health Plan","YYYY-MM-DD","YYYY-MM-DD","[Sent / Pending Receipt]","Portal Reference #: ________________",Self,Day 0
+Phase 1,"Attach Copies: Bill, EOB, Network Status Proof","YYYY-MM-DD","YYYY-MM-DD","[Complete / Missing Items]","Document Checklist: □Bill □EOB □Proof",Self,Day 0
+Phase 1,"Log USPS Tracking Numbers in Spreadsheet","YYYY-MM-DD","YYYY-MM-DD","[Logged / Not Logged]",Tracking Number Recorded: ________,Self,Day 0
+Phase 2,"Provider 30-Day Response Window Begins","YYYY-MM-DD","YYYY-MM-DD","[Started / Active]",Postmarked Date: ________________,Self,Day 0
+Phase 2,"Monitor for Collection Contact During Review","DD-MMM","YYYY-MM-DD","[None Contacted / Contacted]",Collection Agency Name: ___________ _,Self,Days 1-30
+Phase 2,"Request Written Status Update at Day 20","YYYY-MM-DD","YYYY-MM-DD","[Requested / Received / None]",Follow-up Letter Sent: [Yes/No],Self,Day 20
+Phase 2,"Provider 30-Day Response Window Expires","YYYY-MM-DD","YYYY-MM-DD","[Pending / Resolved / Unresolved]","Written Response: [Yes / No]",Self,Day +30
+Phase 3,"File Complaint: Pennsylvania Insurance Department","YYYY-MM-DD","YYYY-MM-DD","[Pending / Active]",PID Complaint #: __________________,Self,Day +31
+Phase 3,"File Complaint: CMS No Surprises Help Desk","YYYY-MM-DD","YYYY-MM-DD","[Pending / Active]",CMS Ticket #: ___________________,Self,Day +31
+Phase 3,"Document All Regulatory Complaint Confirmations","YYYY-MM-DD","YYYY-MM-DD","[Complete / Incomplete]",Screenshot/Emailed Confirmations:__,__Self,Day +35
+Phase 4,"Obtain Written Confirmation of $0 Balance","YYYY-MM-DD","YYYY-MM-DD","[Closed / Escalated to Counsel]","Zero Balance Letter Date: ________",Self,Day +60
+Phase 4,"Verify Credit Report Shows No Negative Marking","YYYY-MM-DD","YYYY-MM-DD","[Clear / Disputed / Issue Found]",Credit Bureau: _________________ _ _,Self,Day +75
+Phase 4,"Retain All Records (Mail, EOBs, Letters)","YYYY-MM-DD","YYYY-MM-DD","[Archived / Scanned / Physical]",Retention Location: _______________,Self,Day +90
+Phase 5,"Optional: Legal Consultation Review","YYYY-MM-DD","YYYY-MM-DD","[Scheduled / Cancelled / N/A]",Attorney Name: ___________________",Self,Day +90
+Notes,,,,,,,,
+Notes,"Critical Reminder: Do NOT make partial payments while dispute is active. May restart statute of limitations.","YYYY-MM-DD","YYYY-MM-DD","[Acknowledged]","Reviewed 42 Pa.C.S. § 5525 Warning",Self,N/A
+Notes,"If collection continues after PID/CMS filing, document every call/contact with dates.","YYYY-MM-DD","YYYY-MM-DD","[Log Started]","FCEUA Violation Log Begin: ____ _ _",Self,Day +31
