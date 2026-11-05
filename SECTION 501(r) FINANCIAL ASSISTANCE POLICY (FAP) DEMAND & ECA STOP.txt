@@ -1,0 +1,111 @@
+================================================================================
+TEMPLATE #9: SECTION 501(r) FINANCIAL ASSISTANCE POLICY (FAP) DEMAND & ECA STOP
+================================================================================
+INSTRUCTIONS: Use this letter for bills from NONPROFIT 501(c)(3) hospitals where 
+collection actions (such as credit reporting, lawsuits, or placement with collection
+agencies) occurred before or without proper Financial Assistance Policy (FAP) 
+screening under 26 U.S.C. § 501(r) and Treasury Regulation § 1.501(r)-6.
+
+SEND VIA: USPS Certified Mail with Return Receipt Requested. Keep a copy.
+================================================================================
+
+[YOUR NAME]
+[YOUR STREET ADDRESS]
+[YOUR CITY, STATE, ZIP CODE]
+[YOUR PHONE NUMBER]
+[YOUR EMAIL ADDRESS]
+
+[DATE: MM/DD/YYYY]
+
+TO:
+Billing and Financial Assistance Department / Compliance Officer
+[HOSPITAL / FACILITY NAME]
+[HOSPITAL STREET ADDRESS]
+[HOSPITAL CITY, STATE, ZIP CODE]
+
+RE: 
+Patient Name: [YOUR FULL NAME]
+Account / Billing Number(s): [ACCOUNT NUMBER(S)]
+Date(s) of Service: [SERVICE DATE(S)]
+Facility Name: [EXACT HOSPITAL NAME]
+Tax-Exempt Status: 501(c)(3) Nonprofit Hospital Organization
+
+--------------------------------------------------------------------------------
+NOTICE OF STATUTORY NON-COMPLIANCE AND DEMAND FOR IMMEDIATE CEASE OF 
+EXTRAORDINARY COLLECTION ACTIONS (ECAs) PURSUANT TO 26 U.S.C. § 501(r)
+--------------------------------------------------------------------------------
+
+Dear Billing Compliance Officer,
+
+Please be advised that the undersigned patient hereby disputes the above-referenced 
+billing account(s) and demands the immediate cessation of all Extraordinary 
+Collection Actions (ECAs), including credit bureau reporting, legal collection 
+proceedings, and third-party placement, pursuant to Section 501(r) of the Internal 
+Revenue Code (26 U.S.C. § 501(r)) and applicable Treasury Regulations.
+
+As a tax-exempt 501(c)(3) hospital organization, [HOSPITAL NAME] is legally 
+prohibited under 26 U.S.C. § 501(r)(6) from engaging in ECAs against an individual 
+to collect a bill for care without first making reasonable efforts to determine 
+whether the individual is eligible for assistance under the hospital's Financial 
+Assistance Policy (FAP). Specifically, federal regulations mandate:
+
+1. THE 120-DAY NOTICE WINDOW: A tax-exempt hospital may not initiate ECAs before 
+   at least 120 days have passed from the date of the first post-discharge billing 
+   statement, provided the facility has delivered adequate advance notice informing 
+   the patient of the FAP.
+2. THE 240-DAY APPLICATION WINDOW: If a patient submits an application for financial 
+   assistance under the hospital's FAP within 240 days of the first post-discharge 
+   billing statement, the hospital must suspend all ECAs while the application 
+   is processed and a determination is rendered.
+3. AMOUNTS GENERALLY BILLED (AGB) LIMITS: Pursuant to 26 U.S.C. § 501(r)(5), 
+   emergency or other medically necessary care may not be charged to FAP-eligible 
+   individuals at amounts exceeding the Amounts Generally Billed (AGB) to individuals 
+   having insurance covering such care.
+
+--------------------------------------------------------------------------------
+DEMAND FOR IMMEDIATE REMEDIAL ACTION
+--------------------------------------------------------------------------------
+
+Based on the foregoing statutory requirements, I hereby demand that [HOSPITAL NAME] 
+and its collection agents take the following remedial actions within thirty (30) 
+days of receipt of this notice:
+
+1. IMMEDIATE COLLECTION SUSPENSION: Immediately suspend all ongoing collection 
+   activities, phone calls, letters, and legal actions regarding Account 
+   [ACCOUNT NUMBER].
+2. CREDIT REPORT EXPUNGEMENT: Immediately withdraw and permanently delete any 
+   adverse or derogatory trade lines or collection accounts reported to Equifax, 
+   Experian, and TransUnion relating to this account, pursuant to 15 U.S.C. § 1692e(8) 
+   and 15 U.S.C. § 1681s-2.
+3. FAP APPLICATION PACKET & RETROACTIVE REVIEW: Transmit a complete, plain-language 
+   Financial Assistance Policy application packet to my mailing address above 
+   and evaluate my account retroactively for FAP eligibility and AGB capping.
+4. WRITTEN CONFIRMATION: Provide written confirmation to my mailing address 
+   confirming that ECAs have been halted pending FAP review.
+
+--------------------------------------------------------------------------------
+RESERVATION OF RIGHTS & REGULATORY ESCALATION
+--------------------------------------------------------------------------------
+
+Failure to comply with Section 501(r) mandates or continued collection activity 
+in violation of federal tax exemption rules will result in formal regulatory 
+escalation, including the filing of an IRS Form 13909 (Tax-Exempt Organization 
+Complaint), a formal complaint with the Pennsylvania Attorney General's Bureau of 
+Consumer Protection under the Fair Credit Extension Uniformity Act (73 P.S. § 2270.1 
+et seq.), and notification to federal oversight bodies regarding tax-exempt 
+compliance violations.
+
+Please direct all future communications regarding this matter in writing to my 
+address listed above. Telephone contact is restricted unless confirmed in writing.
+
+Sincerely,
+
+[YOUR SIGNATURE]
+
+[YOUR PRINTED NAME]
+
+Enclosures:
+- Copy of disputed billing statement(s)
+- Proof of Certified Mail Tracking: [INSERT TRACKING NUMBER]
+
+================================================================================
