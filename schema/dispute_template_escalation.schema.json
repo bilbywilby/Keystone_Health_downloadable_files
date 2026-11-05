@@ -1,0 +1,99 @@
+{
+"$schema": "https://json-schema.org/draft/2020-12/schema",
+"title": "DisputeTemplateEscalationSchema",
+"type": "object",
+"properties": {
+"disputeMetadata": {
+"type": "object",
+"properties": {
+"disputeId": {
+"type": "string",
+"format": "uuid",
+"description": "Globally unique identifier for the dispute."
+},
+"submissionDate": {
+"type": "string",
+"format": "date-time",
+"description": "ISO-8601 timestamp of when the dispute was created."
+},
+"jurisdiction": {
+"type": "string",
+"enum": ["PA", "FEDERAL"],
+"description": "Applicable legal jurisdiction."
+},
+"disputedAmountUsd": {
+"type": "number",
+"minimum": 0,
+"description": "Dollar amount being contested."
+}
+},
+"required": [
+"disputeId",
+"submissionDate",
+"jurisdiction",
+"disputedAmountUsd"
+],
+"additionalProperties": false
+},
+​"escalationThresholds": {
+"type": "object",
+"properties": {
+"mandatoryAttorneyThresholdUsd": {
+"type": "number",
+"default": 5000,
+"description": "Amount above which attorney involvement is strongly recommended."
+},
+"activeLitigationStatus": {
+"type": "boolean",
+"description": "True if the dispute is already part of an active lawsuit."
+},
+"emergencyRedFlagsIdentified": {
+"type": "array",
+"items": {
+"type": "string",
+"enum": [
+"COURT_SUMMONS_SERVED",
+"JUDGMENT_ENTERED",
+"WAGE_GARNISHMENT",
+"BANK_LEVY",
+"PROPERTY_LIEN"
+]
+},
+"description": "List of critical legal events that trigger immediate attorney review."
+}
+},
+"required": [
+"mandatoryAttorneyThresholdUsd",
+"activeLitigationStatus",
+"emergencyRedFlagsIdentified"
+],
+"additionalProperties": false
+},
+​"templateParameters": {
+"type": "object",
+"properties": {
+"statutoryCitations": {
+"type": "array",
+"items": { "type": "string" },
+"description": "Full citations (e.g., "45 C.F.R. § 149.410") to be inserted into the letter."
+},
+"administrativeReviewRequested": {
+"type": "boolean",
+"description": "Whether the template includes a request for an administrative review."
+},
+"reservationOfRights": {
+"type": "boolean",
+"description": "Flag to add a rights-reservation clause at the end of the letter."
+}
+},
+"required": [
+"statutoryCitations",
+"administrativeReviewRequested",
+"reservationOfRights"
+],
+"additionalProperties": false
+}
+},
+"required": ["disputeMetadata", "escalationThresholds", "templateParameters"],
+"additionalProperties": false
+}
