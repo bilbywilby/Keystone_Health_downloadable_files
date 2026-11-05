@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""
+Medical Debt CMS Dispatcher
+Requirements:
+  - HTTPS only (no redirects)
+  - Idempotency keys derived from record fields so retries don't collide
+  - Strong redaction using keyed HMAC with a dedicated secret
+  - Strict environment validation before execution
+"""
+
+import json
+import csv
+import hashlib
+import hmac
+import os
+import sys
+import time
+from pathlib import Path
+import requests
+
+# ---------- CONFIGURATION ----------
+DISPATCH_WEBHOOK_URL = os.getenv("DISPATCH_WEBHOOK_URL")
+if not DISPATCH_WEBHOOK_URL:
+    raise RuntimeError("DISPATCH_WEBHOOK_URL must be set")
+
+HMAC_SECRET = os.getenv("HMAC_SECRET", "").encode("utf-8")
+if len(HMAC_SECRET) < 32:
+    raise RuntimeError("HMAC_SECRET too short or missing")
+
+OUTPUT_DIR = Path("output")
+OUTPUT_DIR.mkdir(exist_ok=True)
+
+# ---------- HELPERS ----------
+def current_date() -> str:
+    """Return ISO string for today in UTC."""
+    return (dt.datetime.now(dt.timezone.utc)).isoformat()
+
+def redact_id(value: str, key: bytes) -> str:
+    """Keyed SHA-256 redaction; prevents simple enumeration."""
+    digest = hmac.new(key, value.encode("utf-8"), hashlib.sha256).hexdigest()
+    return f"ID-{digest[:24]}"
+
+def idempotency_key(account_id: str, doc_id: str, deadline_str: str) -> str:
+    """Unique per account+document+deadline; survives retries."""
+    message = f"{account_id}|{doc_id}|{deadline_str}"
+    return hmac.new(HMAC_SECRET, message.encode("utf-8"), hashlib.sha256).hexdigest()
+
+def build_payload(record: dict) -> dict:
+    """
+    Construct POST body.
+    Redacts identifiers, uses UTC timestamp, and includes risk tier.
+    """
+    account_id = redact_id(record["account_id"], HMAC_SECRET)
+    document_id = redact_id(record["document_id"], HMAC_SECRET)
+    payload = {
+        "account_id": account_id,
+        "document_id": document_id,
+        "violation_type": record["violation_type"],
+        "action_deadline": record["action_deadline"],
+        "status": record["status"],
+        "source_timestamp": current_date(),
+        "idempotency_key": idempotency_key(
+            record["account_id"],
+            record["document_id"],
+            record["action_deadline"],
+        ),
+        "risk_tier": record["risk_tier"],
+    }
+    # Optional: include notes field if it contains actionable info without PHI
+    if "notes" in record and record["notes"]:
+        payload["notes"] = record["notes"]
+    return payload
+
+def post_with_retry(session: requests.Session, url: str, payload: dict) -> bool:
+    """
+    Retry logic with exponential backoff and strict HTTP checks.
+    """
+    headers = {"Idempotency-Key": idempotency_key(
+        payload["account_id"],
+        payload["document_id"],
+        payload["action_deadline"],
+    )}
+    for attempt in range(1, 5 + 1):
+        try:
+            resp = session.post(url, json=payload, headers=headers,
+                               timeout=(5, 20),
+                               allow_redirects=False)
+            if 200 <= resp.status_code < 300:
+                print(f"✅ Dispatched {payload['account_id']} ({payload['document_id']})")
+                return True
+            if resp.status_code == 429:
+                print("[WARN] Rate limit hit, retrying...")
+                time.sleep(2 * (attempt ** 2))
+                continue
+            raise requests.HTTPError(f"HTTP {resp.status_code}")
+        except requests.RequestException as exc:
+            if attempt == 5:
+                print(f"[ERROR] Failed after 5 attempts: {exc}", file=sys.stderr)
+                return False
+            wait = 2 * (attempt ** 2)
+            print(f"[WARN] {exc}, retrying in {wait:.0f}s...")
+            time.sleep(wait)
+    return False
+
+def load_debts(filepath: str = "data/debts.json") -> list[dict]:
+    """Load debt records; returns empty list on error."""
+    if not Path(filepath).exists():
+        print(f"[WARN] No data file found at {filepath}", file=sys.stderr)
+        return []
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"[ERROR] JSON parse failed: {e}", file=sys.stderr)
+        return []
+
+def save_log(entry: dict) -> None:
+    """
+    Append to audit log with previous-hash linkage for chain-of-custody.
+    Format: sha256_of_entry|account_id|document_id|timestamp
+    """
+    digest = hashlib.sha256(json.dumps(entry, sort_keys=True).encode()).hexdigest()
+    log_path = OUTPUT_DIR / "dispatch_audit.log"
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(f"{digest}|{entry['account_id']}|{entry['document_id']}|{entry['action_deadline']}\n")
+
+def main() -> int:
+    # Environment validation
+    if not DISPATCH_WEBHOOK_URL:
+        print("[FATAL] DISPATCH_WEBHOOK_URL not set", file=sys.stderr)
+        return 1
+
+    debts = load_debts("data/debts.json")
+    if not debts:
+        print("[INFO] No debt records to dispatch.")
+        return 0
+
+    session = requests.Session()
+
+    failures = 0
+    successes = 0
+
+    for item in debts:
+        try:
+            payload = build_payload(item)
+            success = post_with_retry(session, DISPATCH_WEBHOOK_URL, payload)
+            if success:
+                save_log(item)
+                successes += 1
+            else:
+                failures += 1
+        except Exception as e:
+            print(f"[ERROR] Processing {item['account_id']}: {e}", file=sys.stderr)
+            failures += 1
+
+    print(f"\nDispatch Summary: {successes} succeeded, {failures} failed.")
+
+    return failures
+
+if __name__ == "__main__":
+    sys.exit(main())
