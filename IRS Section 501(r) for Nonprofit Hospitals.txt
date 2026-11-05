@@ -1,0 +1,35 @@
+##IRS Section 501(r) for Nonprofit Hospitals
+
+### Scope
+
+Section 501(r) applies only to **hospital organizations** that operate under 501(c)(3) status. It does not apply to independent physician practices, ambulance companies, or for-profit facilities. Enforcement belongs to the **IRS**. Section 501(r) does not create a private right of action, but violations expose hospitals to tax-exempt status revocation and create leverage when combined with state consumer protection laws (FCEUA/UTPCPL).
+
+### Key Requirements
+
+- **Financial Assistance Policy (FAP):** A written, widely publicized policy detailing eligibility criteria (e.g., gross family income as percentage of Federal Poverty Guidelines), free or discounted care terms, and application procedures.
+- **Amounts Generally Billed (AGB) Limit:** Under 26 U.S.C. § 501(r)(5), a hospital may not charge a FAP-eligible patient more than AGB for emergency or other medically necessary care.
+- **Extraordinary Collection Action (ECA) Limits:** Under 26 U.S.C. § 501(r)(6)), a hospital may not start an ECA until it has made reasonable efforts to determine FAP eligibility.
+
+### Mandatory Timelines (measured from first post-discharge billing statement)
+
+| Timeline | Duration | Protection / Requirement |
+|---|---|---|
+| **ECA Prohibition Window** | 120 days | No extraordinary collection actions may begin before 120 days have passed. ECAs include credit reporting, liens, bank levies, wage garnishment, and lawsuits. |
+| **FAP Application Window** | 240 days | Hospital must accept and process a FAP application for at least 240 days from the initial post-discharge billing statement date. |
+| **Retroactive Resolution** | N/A | If patient submits complete FAP application within 240-day window and is found eligible, hospital must reverse ECAs, refund excess payments, and instruct credit reporting agencies to delete adverse trade lines. |
+
+**[VERIFY]:** While the 120/240-day windows are well-established, confirm against current Treasury regulation at **26 C.F.R. § 1.501(r)-6** for exact timing rules, exceptions, and any recent amendments.
+
+### Strategic Intersection with No Surprises Act & Pennsylvania Protections
+
+Combining 501(r) with the NSA and FCEUA creates a multi-layered defense model:
+
+1. **Substantive Invalidations:** NSA invalidates out-of-network balance bills for emergency/ancillary services; 501(r) caps charges at AGB for FAP-eligible patients.
+2. **Procedural Stoppage:** FCEUA (§ 73 P.S. § 2270.4) and FDCPA (§ 15 U.S.C. § 1692g) require immediate administrative hold on collection efforts during active disputes.
+3. **Tax-Exempt Compliance Leverage:** If a nonprofit hospital initiates ECAs before 120 days or before evaluating a pending FAP application, it violates § 501(r)(6)). This procedural default exposes the institution to IRS audit scrutiny and creates independent statutory claims under Pennsylvania's UTPCPL (via FCEUA incorporation).
+
+### Practical Use
+
+- **Request FAP & Application Immediately:** Demand the hospital's written FAP, plain-language summary, and application form via Certified Mail with Return Receipt Requested.
+- **Audit the 120-Day Window:** Verify whether any collection agency or legal counsel initiated an ECA prior to 120 days post-discharge — if so, this is a clear violation.
+- **Assert Dual-Track Non-Compliance:** Combine your NSA violation notice with an active FAP application notice to compel billing department to halt collection, withdraw balance charges, and re-route reimbursement disputes to the Federal IDR portal.
