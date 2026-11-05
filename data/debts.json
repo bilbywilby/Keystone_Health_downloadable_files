@@ -1,0 +1,27 @@
+[
+  {
+    "account_id": "ACC-1003",
+    "document_id": "SOL-TERM-001",
+    "violation_type": "Time-barred SOL under 42 Pa.C.S. § 5525(a)",
+    "action_deadline": "2026-11-05T00:00:00Z",   // USPS delivery date
+    "status": "PENDING_DISPATCH",
+    "notes": "Four-year limitation expired; must send SOL Termination Notice",
+    "risk_tier": "RED"
+  },
+  {
+    "account_id": "ACC-1011",
+    "document_id": "501r-COMPLAINT-001",
+    "violation_type": "501(r) violation — failed FAP screening",
+    "action_deadline": "2026-12-01T00:00:00Z",
+    "status": "PENDING_DISPATCH",
+    "risk_tier": "RED"
+  },
+  {
+    "account_id": "ACC-1008",
+    "document_id": "FAP-WARNING-001",
+    "violation_type": "Upcoming FAP deadline",
+    "action_deadline": "2026-12-15T00:00:00Z",
+    "status": "PENDING_DISPATCH",
+    "risk_tier": "YELLOW"
+  }
+]
