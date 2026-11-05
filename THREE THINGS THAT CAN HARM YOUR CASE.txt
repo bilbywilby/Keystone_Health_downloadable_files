@@ -1,0 +1,30 @@
+⚠️ URGENT: THREE THINGS THAT CAN HARM YOUR CASE
+
+1. DO NOT IGNORE COURT PAPERS. If you receive a summons or complaint, 
+   you must respond by the deadline. Regulator complaints do NOT stop 
+   court proceedings.
+
+2. DO NOT MAKE PAYMENTS WHILE A DISPUTE IS OPEN. Even small payments 
+   can affect your legal position. Get legal advice before paying 
+   anything on an older debt.
+
+3. DO NOT MISS INSURANCE APPEAL DEADLINES. These vary by plan and 
+   are stated in your denial notices. Agency complaints do not extend 
+   insurer deadlines.
+```
+
+### Quick Screen: Is Your Plan Fully Insured or Self-Funded?
+
+**Likely Fully Insured if:**
+- Your insurance card shows a major carrier (BCBS, Aetna, Cigna, Highmark, etc.)
+- Your employer has fewer than 100 employees
+- Your denial notice mentions PID external review or Act 146 rights
+
+**Likely Self-Funded if:**
+- Your employer is large (100+ employees) or a government entity
+- Your EOB says "self-funded," "ERISA," or "administratively serviced"
+- Your denial notice only mentions federal IDR or CMS complaint routes
+
+**When in doubt:** Call your HR/benefits department and ask: 
+"Is my health plan fully insured (state-regulated) or self-funded (ERISA)?"
+Get the answer in writing if possible.
