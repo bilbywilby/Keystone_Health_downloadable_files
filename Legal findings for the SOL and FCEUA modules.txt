@@ -1,0 +1,126 @@
+The Pennsylvania revival research turned up one clear point and one legal question that still needs counsel. I've also drafted the CI workflow and redaction helper that were blocking the pipeline. I haven't seen the current scripts, so treat these as replacements to review, not patches.
+
+## Legal findings for the SOL and FCEUA modules
+
+Pennsylvania has **no statute** on whether a payment or promise revives a time-barred debt. The rule comes from common law: a clear, distinct, and unequivocal acknowledgment of the debt can toll or restart the clock, and the leading case cited is *Huntingdon Finance Corp. v. Newtown Artesian Water Co.* (1995) <citation src="2"></citation>. Some sites say any partial payment resets the clock automatically <citation src="5"></citation>, but that overstates the doctrine, so I would not encode it. The No-Payment Rule should block any payment or written acknowledgment on accounts past the limit, pending counsel's approval of the revival language.
+
+The 4-year period under 42 Pa.C.S. § 5525(a) applies to written and oral contracts alike <citation src="1"></citation>. The sources disagree on when the clock starts. One says from breach or default <citation src="1"></citation>, another from the first missed payment <citation src="9"></citation>, and a third from last activity <citation src="4"></citation>. Since this is still an open question, the CMS should store the accrual rule and trigger date per account instead of hardcoding one.
+
+Pending state legislation could change this. HB 1731 would add a separate 3-year deadline for consumer debt, running from the last payment or charge. As of the latest check, it has not passed either chamber <citation src="2"></citation>. The SOL engine should accept a jurisdiction-rule version so this can be turned on without a code change.
+
+The FCEUA covers both creditors and collectors, and a violation is also a UTPCPL violation <citation src="7"></citation>. One source gives a **two-year** limit for FCEUA claims <citation src="6"></citation>, but that is a 2017 blog post and not the statute text. The open question on the FCEUA filing period stays open until someone checks 73 P.S. § 2270 directly.
+
+## CI workflow with version matrix and branch guards
+
+This replaces `.github/workflows/python-ci.yml`. It runs tests on Python 3.10, 3.11, and 3.12. Dispatch runs only on pushes to `main`, which I've assumed is the protected default branch, and only inside a protected environment.
+
+```yaml
+name: python-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+      - name: Validate schema
+        run: python scripts/validate_schema.py data/debts.json
+      - name: Run statutory timeline tests
+        run: pytest -q tests/
+
+  dispatch:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Dispatch work orders
+        env:
+          DISPATCH_WEBHOOK_URL: ${{ secrets.DISPATCH_WEBHOOK_URL }}
+          HMAC_SECRET: ${{ secrets.HMAC_SECRET }}
+        run: python scripts/dispatch_work_orders.py
+```
+
+## Redaction and idempotency helper
+
+The redaction helper keys every identifier with HMAC-SHA256 and refuses to run with a short secret. The idempotency key is also keyed, so the work-order contents cannot be inferred from it. Both the `Idempotency-Key` header and the redaction rules are my proposal, since the receiving API's schema and retention policy are still unknown.
+
+```python
+# scripts/redact.py
+import hashlib
+import hmac
+import os
+
+MIN_KEY_BYTES = 32
+
+
+def load_hmac_key() -> bytes:
+    key = os.environ.get("HMAC_SECRET", "").encode("utf-8")
+    if len(key) < MIN_KEY_BYTES:
+        raise RuntimeError(f"HMAC_SECRET must be at least {MIN_KEY_BYTES} bytes")
+    return key
+
+
+def redact_identifier(value: str, key: bytes) -> str:
+    """Keyed, non-reversible token for account and document IDs on non-BAA channels."""
+    digest = hmac.new(key, value.encode("utf-8"), hashlib.sha256).hexdigest()
+    return f"hmac-sha256:{digest}"
+
+
+def idempotency_key(account_id: str, document_id: str,
+                    violation_type: str, deadline: str, key: bytes) -> str:
+    """Deterministic key so retries of the same work order are deduplicated by the receiver."""
+    material = "|".join([account_id, document_id, violation_type, deadline])
+    return hmac.new(key, material.encode("utf-8"), hashlib.sha256).hexdigest()
+
+
+def sha256_file(path: str) -> str:
+    """Digest for the chain-of-custody record linking each document ID to its file."""
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            h.update(chunk)
+    return h.hexdigest()
+```
+
+In `dispatch_work_orders.py`, the POST should use `requests.post(url, json=payload, headers={"Idempotency-Key": ik}, timeout=10, allow_redirects=False)`. Treat any 3xx response as a failure, not something to follow. Redacted tokens should be the only identifiers in the payload unless the channel is a BAA channel.
+
+## Still open
+
+The following items need someone outside this project to answer, and I haven't resolved them:
+
+- The receiving API's payload schema and idempotency-retention period
+- Whether the dataset records count as PHI
+- The accrual rule and actual breach dates for the 15 accounts
+- Whether FAP applications were filed for the 501(r) accounts
+- Counsel's sign-off on the SOL revival language and the 501(r) complaint citations
+- The codified section for PID external review, which I have not searched yet
+- The FCRA furnisher-duties subsection, which I have not searched yet
+- The FCEUA filing period, which needs the statute text
