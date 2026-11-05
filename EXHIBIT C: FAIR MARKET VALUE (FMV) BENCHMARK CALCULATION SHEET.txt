@@ -1,0 +1,75 @@
+================================================================================
+EXHIBIT C: FAIR MARKET VALUE (FMV) BENCHMARK CALCULATION SHEET
+================================================================================
+
+PATIENT NAME:      [Patient Full Name]
+ACCOUNT NUMBER:    [Account / Invoice Number]
+DATE OF SERVICE:   [Date of Service]
+DISPUTED CPT CODE: 99214 (Office/Outpatient Visit, Established Patient)
+AUDIT METHODOLOGY: 2026 Medicare Physician Fee Schedule (MPFS) & Regional GPCI 
+
+--------------------------------------------------------------------------------
+1. NATIONAL BASE RELATIVE VALUE UNITS (RVUs)
+--------------------------------------------------------------------------------
+Component                        RVU Weight     Description
+--------------------------------------------------------------------------------
+Work RVU (wRVU)                  1.9200         Clinical skill, time, & intensity
+Practice Expense RVU (PE RVU)    1.8300         Non-facility overhead & staffing
+Malpractice RVU (MP RVU)         0.1000         Professional liability insurance
+--------------------------------------------------------------------------------
+TOTAL NATIONAL RVU               4.0600         Sum of base weights
+
+--------------------------------------------------------------------------------
+2. GEOGRAPHIC PRACTICE COST INDICES (GPCI) - PENNSYLVANIA REGION
+--------------------------------------------------------------------------------
+Component                        GPCI Multiplier   Adjustment Impact
+--------------------------------------------------------------------------------
+Work GPCI                        1.0000            State labor index baseline
+Practice Expense GPCI            1.0340            Localized urban overhead index
+Malpractice GPCI                 0.6520            Localized liability risk index
+
+--------------------------------------------------------------------------------
+3. ADJUSTED RVU CALCULATION
+--------------------------------------------------------------------------------
+Formula: [(wRVU × Work GPCI) + (PE RVU × PE GPCI) + (MP RVU × MP GPCI)]
+
+  • Work Component:      1.9200 × 1.0000 = 1.9200
+  • Practice Expense:    1.8300 × 1.0340 = 1.8922
+  • Malpractice:         0.1000 × 0.6520 = 0.0652
+--------------------------------------------------------------------------------
+TOTAL GEOGRAPHICALLY ADJUSTED RVU        3.8772
+
+--------------------------------------------------------------------------------
+4. DOLLAR CONVERSION & BASELINE DERIVATION
+--------------------------------------------------------------------------------
+  • 2026 Medicare Conversion Factor:     $33.4009
+  • Calculation:                         3.8772 RVU × $33.4009
+--------------------------------------------------------------------------------
+LOCALIZED MEDICARE BASELINE VALUE:       $129.50
+
+--------------------------------------------------------------------------------
+5. COMMERCIAL FMV BENCHMARK SCALING
+--------------------------------------------------------------------------------
+Because commercial insurers reimburse above baseline Medicare rates, a standard 
+market scaling multiplier of 175% is applied to establish an upper-bound Fair 
+Market Value benchmark.
+
+  • Calculation:                         $129.50 × 1.75
+--------------------------------------------------------------------------------
+FINAL CALCULATED COMMERCIAL FMV:         $226.63
+
+--------------------------------------------------------------------------------
+6. VARIANCE & DISCREPANCY ANALYSIS
+--------------------------------------------------------------------------------
+  • Provider Billed Chargemaster Rate:   $[Billed Amount, e.g., 450.00]
+  • Calculated Commercial FMV Benchmark: $226.63
+--------------------------------------------------------------------------------
+  • OVERCHARGE VARIANCE:                 $[Dollar Variance] ([Variance %]%)
+  • AUDIT RISK TIER:                     Critical Overcharge (> 40% Variance)
+
+================================================================================
+VERIFICATION & CERTIFICATION NOTE:
+All calculations are derived from published federal fee schedules (CMS-1832-F / 
+2026 MPFS Final Rule) and state economic indices. This sheet serves as Exhibit C 
+supporting the formal administrative dispute and request for account adjustment.
+================================================================================
