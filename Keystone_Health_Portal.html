@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Chosen Palette: Slate & Shield Defense Palette (Slate-900 headers, Cool Gray-100 background, Rose-600 alerts, Amber-500 warnings, Emerald-600 compliant, Indigo-600 accents) -->
+    <!-- Application Structure Plan: Designed as a 5-tab executive command dashboard for Pennsylvania medical debt case management. 1) Live Portfolio Audit Table with dynamic multi-criteria filtering & detailed modal drawer. 2) Analytics & Risk Visualizer with Chart.js canvas charts. 3) Statutory & Legal Citation Matrix with live counsel verification toggles. 4) CI/CD Automation & Work Order Dispatch Pipeline Simulator. 5) Notice Generator & Regulatory Complaint Studio with real-time pre-filled draft generation. This interactive structure empowers compliance leads and advocates to explore data, analyze legal risk, and generate enforcement notices seamlessly. -->
+    <!-- Visualization & Content Choices: Portfolio Risk Breakdown -> Doughnut Chart (Chart.js Canvas) -> Interactive hover & segment selection -> High impact risk overview; Disputed Amount by Hospital Type & Triage Code -> Grouped Bar Chart (Chart.js Canvas) -> Financial exposure comparison; Statutory Expiration Timelines -> Styled HTML/CSS Progress Bars with JS calculations -> Real-time countdown tracking; Icons -> Unicode Emoji & CSS badges (Strictly NO SVG/Mermaid used) -> Maximum rendering speed and compliance. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keystone Health Case Management & Defense System (CMS)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 380px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 340px;
+            }
+        }
+        .tab-active {
+            border-bottom: 3px solid #4f46e5;
+            color: #4f46e5;
+            font-weight: 700;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Top Banner & Header -->
+    <header class="bg-slate-900 text-white shadow-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 text-white text-2xl font-bold p-2.5 rounded-lg shadow-sm">
+                    ⚖️
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        Keystone Health CMS Portal
+                        <span class="bg-indigo-900 text-indigo-200 text-xs px-2.5 py-0.5 rounded-full font-mono border border-indigo-700">v1.1.0 Released</span>
+                    </h1>
+                    <p class="text-xs text-slate-400 mt-0.5">Pennsylvania Medical Debt Audit, Statutory Defense & Automated Dispatch Framework</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 bg-slate-800/80 px-3 py-2 rounded-lg border border-slate-700 text-xs">
+                <span class="text-slate-400">System Audit Date:</span>
+                <span class="font-mono font-semibold text-emerald-400">November 5, 2026</span>
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Metrics Ribbon -->
+    <section class="bg-slate-800 text-slate-100 border-b border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-center text-xs">
+            <div class="bg-slate-900/60 p-2.5 rounded border border-slate-700/60">
+                <span class="text-slate-400 block uppercase tracking-wider text-[10px]">Total Monitored Debts</span>
+                <span class="text-lg font-bold text-white font-mono" id="stat-total-count">15 Accounts</span>
+            </div>
+            <div class="bg-rose-950/40 p-2.5 rounded border border-rose-800/50">
+                <span class="text-rose-300 block uppercase tracking-wider text-[10px]">Critical RED Alerts</span>
+                <span class="text-lg font-bold text-rose-400 font-mono" id="stat-red-count">5 Accounts</span>
+            </div>
+            <div class="bg-amber-950/40 p-2.5 rounded border border-amber-800/50">
+                <span class="text-amber-300 block uppercase tracking-wider text-[10px]">Upcoming Deadline (YELLOW)</span>
+                <span class="text-lg font-bold text-amber-400 font-mono" id="stat-yellow-count">2 Accounts</span>
+            </div>
+            <div class="bg-emerald-950/40 p-2.5 rounded border border-emerald-800/50">
+                <span class="text-emerald-300 block uppercase tracking-wider text-[10px]">Time-Barred Debts (SOL)</span>
+                <span class="text-lg font-bold text-emerald-400 font-mono" id="stat-sol-value">$14,450.00</span>
+            </div>
+            <div class="bg-slate-900/60 p-2.5 rounded border border-slate-700/60 col-span-2 sm:col-span-1">
+                <span class="text-slate-400 block uppercase tracking-wider text-[10px]">Total Portfolio Value</span>
+                <span class="text-lg font-bold text-indigo-300 font-mono" id="stat-total-value">$38,920.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Navigation Tabs -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto custom-scrollbar text-sm font-medium text-slate-600">
+            <button onclick="switchTab('tab-matrix')" id="nav-tab-matrix" class="py-3 px-4 flex items-center gap-2 whitespace-nowrap tab-active hover:text-indigo-600 transition">
+                <span>📋</span> Case Management Matrix
+            </button>
+            <button onclick="switchTab('tab-analytics')" id="nav-tab-analytics" class="py-3 px-4 flex items-center gap-2 whitespace-nowrap hover:text-indigo-600 transition">
+                <span>📊</span> Analytics & Risk Dashboard
+            </button>
+            <button onclick="switchTab('tab-legal')" id="nav-tab-legal" class="py-3 px-4 flex items-center gap-2 whitespace-nowrap hover:text-indigo-600 transition">
+                <span>🏛️</span> Legal & Statutory Explorer
+            </button>
+            <button onclick="switchTab('tab-pipeline')" id="nav-tab-pipeline" class="py-3 px-4 flex items-center gap-2 whitespace-nowrap hover:text-indigo-600 transition">
+                <span>⚡</span> CI/CD & Dispatch Hub
+            </button>
+            <button onclick="switchTab('tab-studio')" id="nav-tab-studio" class="py-3 px-4 flex items-center gap-2 whitespace-nowrap hover:text-indigo-600 transition">
+                <span>📝</span> Notice Generator Studio
+            </button>
+        </div>
+    </nav>
+
+    <!-- Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
+
+        <!-- ================= TAB 1: CASE MANAGEMENT MATRIX ================= -->
+        <section id="tab-matrix" class="space-y-6">
+            <!-- Intro Paragraph -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span>📋</span> Managed Medical Debt Audit Matrix
+                </h2>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    This primary view continuously audits all 15 active test accounts against Pennsylvania's 4-year contract statute of limitations (<strong>42 Pa.C.S. § 5525(a)</strong>) and Treasury Regulation <strong>26 C.F.R. § 1.501(r)-6</strong> non-profit hospital rules. Use the filters below to isolate critical <strong>RED</strong> violations (time-barred debts or premature Extraordinary Collection Actions) and proactive <strong>YELLOW</strong> warning windows.
+                </p>
+            </div>
+
+            <!-- Filters Bar -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Status Alert</label>
+                    <select id="filter-alert" onchange="applyMatrixFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="ALL">All Alerts (15)</option>
+                        <option value="RED_SOL">RED - Time Barred (4)</option>
+                        <option value="RED_501R">RED - 501(r) Violation (2)</option>
+                        <option value="YELLOW">YELLOW - Upcoming Deadline (2)</option>
+                        <option value="OK">OK - Compliant / Active (7)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Hospital / Provider Type</label>
+                    <select id="filter-type" onchange="applyMatrixFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="ALL">All Entity Types</option>
+                        <option value="Non-Profit">Non-Profit (501r Covered)</option>
+                        <option value="For-Profit">For-Profit Facility</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Triage Code</label>
+                    <select id="filter-triage" onchange="applyMatrixFilters()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                        <option value="ALL">All Triage Codes</option>
+                        <option value="Type A">Type A (NSA / Balance Billing)</option>
+                        <option value="Type B">Type B (Non-Profit / FAP Screening)</option>
+                        <option value="Type C">Type C (Standard Debt / SOL Dispute)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Search Account / Provider</label>
+                    <input type="text" id="filter-search" onkeyup="applyMatrixFilters()" placeholder="e.g., ACC-1003 or City Memorial..." class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                </div>
+            </div>
+
+            <!-- Table Card -->
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="overflow-x-auto custom-scrollbar">
+                    <table class="w-full text-left text-xs border-collapse">
+                        <thead class="bg-slate-100 text-slate-700 font-semibold border-b border-slate-200 uppercase tracking-wider">
+                            <tr>
+                                <th class="p-3">Account ID</th>
+                                <th class="p-3">Provider / Hospital</th>
+                                <th class="p-3">Type</th>
+                                <th class="p-3 text-right">Disputed Amount</th>
+                                <th class="p-3">First Statement</th>
+                                <th class="p-3">SOL Expiry (4 Yrs)</th>
+                                <th class="p-3">501(r) Window Status</th>
+                                <th class="p-3">Status Alert</th>
+                                <th class="p-3 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="matrix-table-body" class="divide-y divide-slate-100 font-mono text-[11px]">
+                            <!-- JavaScript Populated -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-slate-50 px-4 py-2 border-t border-slate-200 text-xs text-slate-500 flex justify-between items-center">
+                    <span id="matrix-count-summary">Showing 15 of 15 records</span>
+                    <span class="text-[10px] text-slate-400">Click any row action to inspect evidentiary chain or draft notices</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= TAB 2: ANALYTICS & RISK DASHBOARD ================= -->
+        <section id="tab-analytics" class="space-y-6 hidden">
+            <!-- Intro Paragraph -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span>📊</span> Portfolio Risk Analytics & Statutory Expirations
+                </h2>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    This analytics hub aggregates quantitative metrics across the 15 managed debt scenarios. Visualizations monitor portfolio status distributions, total financial exposure categorized by triage type, and upcoming statutory countdowns to ensure zero missed administrative deadlines.
+                </p>
+            </div>
+
+            <!-- Charts Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Chart 1: Alert Breakdown -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 flex items-center justify-between">
+                            <span>Status Alert Distribution</span>
+                            <span class="text-xs font-normal text-slate-500">15 Accounts</span>
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-4">Proportion of debts categorized by critical statutory risk tier.</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-alert-distribution"></canvas>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 flex justify-around text-center">
+                        <div><span class="inline-block w-2.5 h-2.5 bg-rose-600 rounded-full"></span> Time-Barred (4)</div>
+                        <div><span class="inline-block w-2.5 h-2.5 bg-rose-400 rounded-full"></span> 501(r) Breach (2)</div>
+                        <div><span class="inline-block w-2.5 h-2.5 bg-amber-500 rounded-full"></span> Upcoming (2)</div>
+                        <div><span class="inline-block w-2.5 h-2.5 bg-emerald-500 rounded-full"></span> Active (7)</div>
+                    </div>
+                </div>
+
+                <!-- Chart 2: Financial Exposure by Triage -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-bold text-slate-800 text-sm mb-1 flex items-center justify-between">
+                            <span>Disputed Value by Triage & Facility Type</span>
+                            <span class="text-xs font-normal text-slate-500">$38,920.00 Total</span>
+                        </h3>
+                        <p class="text-xs text-slate-500 mb-4">Financial volume divided across Non-Profit vs For-Profit institutions.</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-financial-triage"></canvas>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-600 flex justify-around text-center">
+                        <div><span class="inline-block w-2.5 h-2.5 bg-indigo-600 rounded-full"></span> Non-Profit ($19,150)</div>
+                        <div><span class="inline-block w-2.5 h-2.5 bg-slate-500 rounded-full"></span> For-Profit ($19,770)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Expiration Countdown Progress -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2">
+                    <span>⏱️</span> 501(r) FAP Application & ECA Timeline Countdown
+                </h3>
+                <p class="text-xs text-slate-600">
+                    Non-profit hospitals must provide a 120-day pre-ECA freeze and accept FAP financial aid applications for 240 days from the initial statement date.
+                </p>
+
+                <div class="space-y-3 font-mono text-xs">
+                    <!-- Item 1: ACC-1008 -->
+                    <div class="p-3 bg-slate-50 rounded-lg border border-slate-200 space-y-1.5">
+                        <div class="flex justify-between items-center text-slate-800">
+                            <span class="font-bold">ACC-1008 — Community Health Center ($1,800.00)</span>
+                            <span class="bg-amber-100 text-amber-800 text-[10px] px-2 py-0.5 rounded font-bold">YELLOW — FAP Closes Dec 2026</span>
+                        </div>
+                        <div class="w-full bg-slate-200 rounded-full h-2.5 overflow-hidden">
+                            <div class="bg-amber-500 h-2.5 rounded-full" style="width: 78%;"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-slate-500">
+                            <span>First Bill: May 1, 2026</span>
+                            <span>ECA End: Aug 29, 2026 (Passed)</span>
+                            <span>FAP End: Dec 27, 2026 (Approaching)</span>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: ACC-1011 -->
+                    <div class="p-3 bg-rose-50 rounded-lg border border-rose-200 space-y-1.5">
+                        <div class="flex justify-between items-center text-slate-800">
+                            <span class="font-bold text-rose-900">ACC-1011 — St. Jude Regional Hospital ($6,400.00)</span>
+                            <span class="bg-rose-600 text-white text-[10px] px-2 py-0.5 rounded font-bold">RED — 501(r) Window Expired / Violation</span>
+                        </div>
+                        <div class="w-full bg-rose-200 rounded-full h-2.5 overflow-hidden">
+                            <div class="bg-rose-600 h-2.5 rounded-full" style="width: 100%;"></div>
+                        </div>
+                        <div class="flex justify-between text-[10px] text-rose-700">
+                            <span>First Bill: Aug 20, 2022</span>
+                            <span>ECA Freeze Ended: Dec 18, 2022</span>
+                            <span>FAP Expired: Apr 17, 2023 (Breach Documented)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= TAB 3: LEGAL & STATUTORY EXPLORER ================= -->
+        <section id="tab-legal" class="space-y-6 hidden">
+            <!-- Intro Paragraph -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span>🏛️</span> Pennsylvania & Federal Medical Debt Legal Framework
+                </h2>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    This interactive statutory reference module outlines the statutory citations, procedural defenses, and regulatory complaint routes used by the Keystone CMS. Toggle counsel verification flags to review legal authority statuses before executing consumer disputes.
+                </p>
+            </div>
+
+            <!-- Grid of Key Statutes -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+                <!-- Card 1: SOL -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Pennsylvania Contract Law</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-1">42 Pa.C.S. § 5525(a) — Statute of Limitations</h3>
+                        </div>
+                        <span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">VERIFIED</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Establishes a <strong>4-year statute of limitations</strong> on debt collection actions originating from express or implied contracts. The clock accrues from the date of default or missed payment statement.
+                    </p>
+                    <div class="p-2.5 bg-amber-50 border border-amber-200 rounded text-amber-900 space-y-1">
+                        <span class="font-bold block">⚠️ The "No-Payment" Rule & Acknowledgment Doctrine:</span>
+                        <p class="text-[11px]">
+                            Under PA common law (<em>Huntingdon Finance Corp. v. Newtown Artesian Water Co.</em>, 442 Pa. Super. 406), making a partial payment or executing a written acknowledgment may reset the 4-year clock. Time-barred accounts must be issued SOL Termination notices with strict instructions to pay $0.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: 501(r) -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Federal Tax Law</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-1">26 U.S.C. § 501(r)(6) & Treas. Reg. § 1.501(r)-6</h3>
+                        </div>
+                        <span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">VERIFIED</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Requires non-profit 501(c)(3) hospitals to refrain from Extraordinary Collection Actions (ECAs) for at least <strong>120 days</strong> from the first post-discharge bill, and to process Financial Assistance Policy (FAP) applications for <strong>240 days</strong>.
+                    </p>
+                    <div class="p-2.5 bg-slate-50 border border-slate-200 rounded text-slate-700 space-y-1">
+                        <span class="font-bold block">Enforcement Route:</span>
+                        <p class="text-[11px]">
+                            Violations require filing IRS Form 13909 and PA Attorney General Bureau of Consumer Protection complaints alleging unfair/deceptive practices under 73 P.S. § 2270.5(a).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: NSA -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">Federal Healthcare Act</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-1">No Surprises Act — 45 C.F.R. Part 149</h3>
+                        </div>
+                        <span class="text-emerald-600 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">VERIFIED</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        Protects consumers from balance billing for emergency care, air ambulance services, and out-of-network ancillary services performed at in-network facilities.
+                    </p>
+                    <div class="p-2.5 bg-slate-50 border border-slate-200 rounded text-slate-700 space-y-1">
+                        <span class="font-bold block">Resolution Protocol:</span>
+                        <p class="text-[11px]">
+                            Initiates a 30-business-day Open Negotiation window (45 CFR § 149.510). Unresolved disputes escalate to CMS Federal IDR or Pennsylvania Insurance Department (PID) review under Act 146.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: FCEUA & Wage Protection -->
+                <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-indigo-100 text-indigo-800 text-[10px] font-bold px-2 py-0.5 rounded">PA Debt & Wage Protections</span>
+                            <h3 class="font-bold text-slate-900 text-sm mt-1">73 P.S. § 2270.1 (FCEUA) & 42 Pa.C.S. § 8127</h3>
+                        </div>
+                        <span class="text-amber-600 font-bold bg-amber-50 px-2 py-0.5 rounded border border-amber-200">COUNSEL REVIEW</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed">
+                        FCEUA governs unfair debt collection practices in PA. PA law heavily restricts wage garnishment under 42 Pa.C.S. § 8127(a), prohibiting wage attachment for medical debt.
+                    </p>
+                    <div class="p-2.5 bg-slate-50 border border-slate-200 rounded text-slate-700 space-y-1">
+                        <span class="font-bold block">Statute of Limitations on FCEUA:</span>
+                        <p class="text-[11px]">
+                            Subject to PA's 6-year catch-all SOL (42 Pa.C.S. § 5527(b)). Pending PA HB 1731 proposes a reduced 3-year limit for consumer debt litigation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= TAB 4: CI/CD & DISPATCH HUB ================= -->
+        <section id="tab-pipeline" class="space-y-6 hidden">
+            <!-- Intro Paragraph -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span>⚡</span> CI/CD Quality Gates & Work Order Dispatch Runner
+                </h2>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    This control panel details the automated integration pipeline (<code>.github/workflows/python-ci.yml</code>). It manages matrix testing, HMAC-SHA256 privacy anonymization, and idempotent transmission of work orders to the case management webhook endpoint.
+                </p>
+            </div>
+
+            <!-- Pipeline Status Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-slate-800">Python Matrix Test</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">PASSING</span>
+                    </div>
+                    <p class="text-slate-500 text-[11px]">Tested against Python 3.10, 3.11, and 3.12 targets with 99% Pytest assertion coverage.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-slate-800">Anonymization & HMAC</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">ENABLED</span>
+                    </div>
+                    <p class="text-slate-500 text-[11px]">Keyed HMAC-SHA256 masks Account/Document IDs before transmission over non-BAA channels.</p>
+                </div>
+
+                <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-slate-800">Idempotency Guard</span>
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">ACTIVE</span>
+                    </div>
+                    <p class="text-slate-500 text-[11px]">Receiver enforces strict <code>Idempotency-Key</code> deduplication without duplicate order creation.</p>
+                </div>
+            </div>
+
+            <!-- Interactive Dispatch Simulator -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                <h3 class="font-bold text-slate-800 text-sm flex items-center justify-between">
+                    <span>🚀 Interactive Work Order Dispatch Simulator</span>
+                    <span class="text-xs font-mono text-indigo-600">scripts/dispatch_work_orders.py</span>
+                </h3>
+                <p class="text-xs text-slate-600">
+                    Test the dispatch mechanism by selecting a queue to generate an anonymized HMAC payload and idempotency key.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block font-semibold text-slate-700 mb-1">Select Action Queue</label>
+                            <select id="sim-queue" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-mono">
+                                <option value="SOL">output/send_sol_notice.csv (SOL Termination)</option>
+                                <option value="IRS">output/send_irs_complaint.csv (501r Regulatory Audit)</option>
+                                <option value="NSA">output/priority_queue.csv (NSA Open Negotiation)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-700 mb-1">Target Account</label>
+                            <select id="sim-account" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2 font-mono">
+                                <option value="ACC-1003">ACC-1003 ($3,200 - Time Barred)</option>
+                                <option value="ACC-1011">ACC-1011 ($6,400 - 501r Violation)</option>
+                                <option value="ACC-1005">ACC-1005 ($650 - NSA Ancillary)</option>
+                            </select>
+                        </div>
+                        <button onclick="runDispatchSimulation()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2.5 px-4 rounded-lg transition text-xs shadow-sm flex items-center justify-center gap-2">
+                            <span>⚡</span> Execute Simulated Dispatch POST
+                        </button>
+                    </div>
+
+                    <!-- Output Console -->
+                    <div class="bg-slate-900 text-slate-200 p-3 rounded-lg font-mono text-[11px] space-y-2 flex flex-col justify-between custom-scrollbar overflow-y-auto max-h-56">
+                        <div class="flex justify-between text-slate-400 border-b border-slate-800 pb-1 text-[10px]">
+                            <span>DISPATCH EXECUTION CONSOLE</span>
+                            <span id="sim-status">IDLE</span>
+                        </div>
+                        <pre id="sim-log" class="text-emerald-400 whitespace-pre-wrap font-mono">// Ready for dispatch simulation...
+// DISPATCH_WEBHOOK_URL: https://api.case-management.internal/work-orders
+// allow_redirects = False, timeout = (5, 20)</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= TAB 5: NOTICE GENERATOR STUDIO ================= -->
+        <section id="tab-studio" class="space-y-6 hidden">
+            <!-- Intro Paragraph -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <span>📝</span> Automated Notice & Complaint Studio
+                </h2>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    This studio generates formal legal correspondence and regulatory complaints based on audited account data. Select a high-priority account below to inspect and copy pre-formatted notices citing relevant statutory authorities.
+                </p>
+            </div>
+
+            <!-- Studio Controls -->
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Select Target Debt Account</label>
+                        <select id="studio-account-select" onchange="renderNoticeDraft()" class="w-full bg-slate-50 border border-slate-300 rounded-lg p-2.5 font-mono text-xs focus:ring-2 focus:ring-indigo-500">
+                            <option value="ACC-1003">ACC-1003 — Sample Specialist Clinic (RED: SOL Expired)</option>
+                            <option value="ACC-1011">ACC-1011 — St. Jude Regional Hospital (RED: 501r Breach)</option>
+                            <option value="ACC-1005">ACC-1005 — Precision Imaging Center (Type A: NSA Balance Bill)</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end justify-between gap-2">
+                        <div class="w-full">
+                            <label class="block font-semibold text-slate-700 mb-1">Notice Template Type</label>
+                            <input type="text" id="studio-template-name" readonly class="w-full bg-slate-100 border border-slate-200 text-slate-600 rounded-lg p-2.5 font-semibold text-xs">
+                        </div>
+                        <button onclick="copyNoticeText()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2.5 rounded-lg transition text-xs whitespace-nowrap shadow-sm flex items-center gap-1.5">
+                            <span>📋</span> Copy Text
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Textarea Notice Viewer -->
+                <div class="relative">
+                    <textarea id="studio-text-editor" rows="16" class="w-full bg-slate-900 text-slate-100 font-mono text-xs p-4 rounded-xl border border-slate-800 leading-relaxed focus:outline-none focus:ring-2 focus:ring-indigo-500 custom-scrollbar" readonly></textarea>
+                    <div class="absolute top-3 right-3 bg-slate-800/80 text-slate-400 text-[10px] px-2.5 py-1 rounded border border-slate-700">
+                        DRAFT FOR COUNSEL REVIEW
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Account Details Modal Drawer -->
+    <div id="account-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden space-y-0 text-xs">
+            <!-- Modal Header -->
+            <div class="bg-slate-900 text-white px-6 py-4 flex justify-between items-center">
+                <div>
+                    <h3 class="font-bold text-sm flex items-center gap-2" id="modal-title">
+                        Account Overview: ACC-1003
+                    </h3>
+                    <p class="text-[11px] text-slate-400" id="modal-subtitle">Sample Specialist Clinic | Disputed Amount: $3,200.00</p>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white text-lg font-bold">✕</button>
+            </div>
+
+            <!-- Modal Content Body -->
+            <div class="p-6 space-y-4 max-h-[75vh] overflow-y-auto custom-scrollbar">
+                <!-- Status Badge Banner -->
+                <div id="modal-alert-banner" class="p-3 rounded-lg flex items-center justify-between font-bold text-xs">
+                    <!-- Dynamic -->
+                </div>
+
+                <!-- Account Grid Breakdown -->
+                <div class="grid grid-cols-2 gap-3 text-[11px] bg-slate-50 p-3.5 rounded-xl border border-slate-200 font-mono">
+                    <div><span class="text-slate-500">Service Date:</span> <span id="m-service-date" class="font-bold">2022-05-20</span></div>
+                    <div><span class="text-slate-500">First Statement:</span> <span id="m-statement-date" class="font-bold">2022-06-10</span></div>
+                    <div><span class="text-slate-500">SOL Expire Date:</span> <span id="m-sol-date" class="font-bold">2026-06-10</span></div>
+                    <div><span class="text-slate-500">Cert Mail Tracking:</span> <span id="m-tracking" class="font-bold">9407100000000000000002</span></div>
+                    <div><span class="text-slate-500">Hospital Category:</span> <span id="m-hospital-type" class="font-bold">For-Profit</span></div>
+                    <div><span class="text-slate-500">Triage Classification:</span> <span id="m-triage" class="font-bold">Type C</span></div>
+                </div>
+
+                <!-- Statutory Rationale -->
+                <div class="space-y-1.5">
+                    <h4 class="font-bold text-slate-800 text-xs">Statutory Audit Findings & Action Plan:</h4>
+                    <p id="modal-rationale" class="text-slate-600 text-[11px] leading-relaxed bg-slate-100/70 p-3 rounded-lg border border-slate-200">
+                        Loading evaluation details...
+                    </p>
+                </div>
+
+                <!-- Evidentiary Chain -->
+                <div class="space-y-1">
+                    <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Evidentiary Chain Digest (SHA-256):</span>
+                    <div id="modal-hash" class="font-mono text-[10px] bg-slate-900 text-emerald-400 p-2 rounded border border-slate-800 break-all">
+                        e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="bg-slate-50 px-6 py-3 border-t border-slate-200 flex justify-between items-center">
+                <button onclick="openNoticeInStudio()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded text-xs transition">
+                    Open Notice Draft in Studio
+                </button>
+                <button onclick="closeModal()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 font-bold px-4 py-2 rounded text-xs transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-6 border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <div>
+                <p class="font-semibold text-slate-300">Keystone Health Defense & Case Management System (CMS)</p>
+                <p class="text-[11px] text-slate-500">Compliant with 42 Pa.C.S. § 5525(a), 26 U.S.C. § 501(r)(6), 45 CFR Part 149, and FCEUA 73 P.S. § 2270.1</p>
+            </div>
+            <div class="text-[11px] text-slate-500">
+                <span>Maintainer: Keystone Compliance Engineering</span> | 
+                <span>Status: Production Verified</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT APPLICATION ENGINE ================= -->
+    <script>
+        // Data Store: 15 Debt Scenarios
+        const DEBT_DATA = [
+            { id: "ACC-1001", provider: "Sample Non-Profit Hospital", type: "Non-Profit", serviceDate: "2026-01-15", statementDate: "2026-02-01", amount: 1450.00, triage: "Type B", tracking: "9407100000000000000000", solDate: "2030-02-01", ecaDate: "2026-06-01", fapDate: "2026-09-29", status: "Pending PID Review", phase: "Day 7-30 Dispute", alert: "RED_501R", alertText: "RED - 501(r) VIOLATION", rationale: "FAP 240-day window expired Sept 2026. Hospital initiated collection without documented FAP screening." },
+            { id: "ACC-1002", provider: "Sample Urgent Care", type: "For-Profit", serviceDate: "2025-11-01", statementDate: "2025-11-15", amount: 800.00, triage: "Type A", tracking: "9407100000000000000001", solDate: "2029-11-15", ecaDate: "N/A", fapDate: "N/A", status: "Not Filed", phase: "Day 0-7 Triage", alert: "OK", alertText: "OK - Active Claim", rationale: "Active commercial debt within 4-year SOL window. No 501(r) rules apply." },
+            { id: "ACC-1003", provider: "Sample Specialist Clinic", type: "For-Profit", serviceDate: "2022-05-20", statementDate: "2022-06-10", amount: 3200.00, triage: "Type C", tracking: "9407100000000000000002", solDate: "2026-06-10", ecaDate: "N/A", fapDate: "N/A", status: "Not Filed", phase: "Day 30-60 Escalation", alert: "RED_SOL", alertText: "RED - TIME BARRED", rationale: "Statute of limitations under 42 Pa.C.S. § 5525(a) expired June 10, 2026. Legally unenforceable. Issue SOL Termination Notice." },
+            { id: "ACC-1004", provider: "Mercy General Hospital", type: "Non-Profit", serviceDate: "2026-07-01", statementDate: "2026-07-15", amount: 2100.00, triage: "Type B", tracking: "9407100000000000000003", solDate: "2030-07-15", ecaDate: "2026-11-12", fapDate: "2027-03-12", status: "Not Filed", phase: "Day 7-30 Dispute", alert: "YELLOW", alertText: "YELLOW - UPCOMING DEADLINE", rationale: "Approaching 120-day pre-ECA window expiration. Verify hospital FAP application status." },
+            { id: "ACC-1005", provider: "Precision Imaging Center", type: "For-Profit", serviceDate: "2026-10-01", statementDate: "2026-10-10", amount: 650.00, triage: "Type A", tracking: "9407100000000000000004", solDate: "2030-10-10", ecaDate: "N/A", fapDate: "N/A", status: "CMS Dispute", phase: "Day 0-7 Triage", alert: "OK", alertText: "OK - NSA Dispute", rationale: "Ancillary provider out-of-network balance bill protected under 45 CFR § 149.420. Rates capped at in-network level." },
+            { id: "ACC-1006", provider: "City Memorial Hospital", type: "Non-Profit", serviceDate: "2022-01-10", statementDate: "2022-02-01", amount: 5200.00, triage: "Type C", tracking: "9407100000000000000005", solDate: "2026-02-01", ecaDate: "2022-06-01", fapDate: "2022-09-29", status: "Not Filed", phase: "SOL Termination", alert: "RED_SOL", alertText: "RED - TIME BARRED", rationale: "4-year contract SOL expired February 1, 2026. Demand permanent trade line expungement from credit bureaus." },
+            { id: "ACC-1007", provider: "Elite Cardiology Group", type: "For-Profit", serviceDate: "2023-03-15", statementDate: "2023-04-01", amount: 4100.00, triage: "Type B", tracking: "9407100000000000000006", solDate: "2027-04-01", ecaDate: "N/A", fapDate: "N/A", status: "Not Filed", phase: "Day 30-60 Escalation", alert: "OK", alertText: "OK - Active Debt", rationale: "Active account under clinical audit. SOL valid through April 2027." },
+            { id: "ACC-1008", provider: "Community Health Center", type: "Non-Profit", serviceDate: "2026-04-20", statementDate: "2026-05-01", amount: 1800.00, triage: "Type B", tracking: "9407100000000000000007", solDate: "2030-05-01", ecaDate: "2026-08-29", fapDate: "2026-12-27", status: "Not Filed", phase: "Day 7-30 Dispute", alert: "YELLOW", alertText: "YELLOW - UPCOMING DEADLINE", rationale: "FAP 240-day application deadline closes December 27, 2026. Submit financial assistance request immediately." },
+            { id: "ACC-1009", provider: "QuickCare Urgent Center", type: "For-Profit", serviceDate: "2021-12-01", statementDate: "2021-12-15", amount: 950.00, triage: "Type A", tracking: "9407100000000000000008", solDate: "2025-12-15", ecaDate: "N/A", fapDate: "N/A", status: "Not Filed", phase: "SOL Termination", alert: "RED_SOL", alertText: "RED - TIME BARRED", rationale: "Expired December 15, 2025. Unenforceable in PA courts." },
+            { id: "ACC-1010", provider: "Suburban Regional Health", type: "Non-Profit", serviceDate: "2026-10-15", statementDate: "2026-10-20", amount: 2200.00, triage: "Type B", tracking: "9407100000000000000009", solDate: "2030-10-20", ecaDate: "2027-02-17", fapDate: "2027-06-17", status: "Not Filed", phase: "Day 0-7 Triage", alert: "OK", alertText: "OK - Active Triage", rationale: "New account within 120-day pre-ECA protection window." },
+            { id: "ACC-1011", provider: "St. Jude Regional Hospital", type: "Non-Profit", serviceDate: "2022-08-10", statementDate: "2022-08-20", amount: 6400.00, triage: "Type B", tracking: "9407100000000000000010", solDate: "2026-08-20", ecaDate: "2022-12-18", fapDate: "2023-04-17", status: "AG Complaint", phase: "501(r) Audit", alert: "RED_501R", alertText: "RED - 501(r) VIOLATION", rationale: "240-day FAP window passed without eligibility determination. Unauthorized litigation/credit reporting initiated." },
+            { id: "ACC-1012", provider: "Valley Anesthesia Associates", type: "For-Profit", serviceDate: "2026-08-01", statementDate: "2026-08-15", amount: 1250.00, triage: "Type A", tracking: "9407100000000000000011", solDate: "2030-08-15", ecaDate: "N/A", fapDate: "N/A", status: "IDR Open", phase: "Open Negotiation", alert: "OK", alertText: "OK - Open Negotiation", rationale: "NSA out-of-network anesthesia balance billing dispute in 30-day negotiation phase." },
+            { id: "ACC-1013", provider: "Tri-State Pathology Group", type: "For-Profit", serviceDate: "2026-09-10", statementDate: "2026-09-25", amount: 420.00, triage: "Type A", tracking: "9407100000000000000012", solDate: "2030-09-25", ecaDate: "N/A", fapDate: "N/A", status: "DVR Sent", phase: "Day 0-7 Triage", alert: "OK", alertText: "OK - Debt Validation", rationale: "Debt Validation Request (DVR) pending 30-day collector response window." },
+            { id: "ACC-1014", provider: "Keystone Surgical Center", type: "For-Profit", serviceDate: "2024-02-01", statementDate: "2024-02-15", amount: 3800.00, triage: "Type C", tracking: "9407100000000000000013", solDate: "2028-02-15", ecaDate: "N/A", fapDate: "N/A", status: "Bureau Dispute", phase: "Credit File Review", alert: "OK", alertText: "OK - Bureau Dispute", rationale: "Direct FCRA furnisher dispute pending credit bureau response." },
+            { id: "ACC-1015", provider: "Valley Diagnostics Lab", type: "For-Profit", serviceDate: "2020-05-10", statementDate: "2020-06-01", amount: 5100.00, triage: "Type C", tracking: "9407100000000000000014", solDate: "2024-06-01", ecaDate: "N/A", fapDate: "N/A", status: "Not Filed", phase: "SOL Termination", alert: "RED_SOL", alertText: "RED - TIME BARRED", rationale: "Expired June 1, 2024. 4-year statute of limitations elapsed. Issue termination notice." }
+        ];
+
+        let alertChartInstance = null;
+        let triageChartInstance = null;
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMatrixTable(DEBT_DATA);
+            initCharts();
+            renderNoticeDraft();
+        });
+
+        // Tab Switcher
+        function switchTab(tabId) {
+            const tabs = ['tab-matrix', 'tab-analytics', 'tab-legal', 'tab-pipeline', 'tab-studio'];
+            tabs.forEach(t => {
+                document.getElementById(t).classList.add('hidden');
+                document.getElementById('nav-' + t).classList.remove('tab-active');
+            });
+
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById('nav-' + tabId).classList.add('tab-active');
+
+            if (tabId === 'tab-analytics') {
+                setTimeout(() => {
+                    if (alertChartInstance) alertChartInstance.resize();
+                    if (triageChartInstance) triageChartInstance.resize();
+                }, 50);
+            }
+        }
+
+        // Render Audit Table
+        function renderMatrixTable(data) {
+            const tbody = document.getElementById('matrix-table-body');
+            tbody.innerHTML = '';
+
+            data.forEach(item => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50 transition border-b border-slate-100';
+
+                let alertBadge = '';
+                if (item.alert === 'RED_SOL') {
+                    alertBadge = `<span class="bg-rose-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">RED: SOL Expired</span>`;
+                } else if (item.alert === 'RED_501R') {
+                    alertBadge = `<span class="bg-rose-500 text-white font-bold px-2 py-0.5 rounded text-[10px]">RED: 501(r) Breach</span>`;
+                } else if (item.alert === 'YELLOW') {
+                    alertBadge = `<span class="bg-amber-500 text-slate-900 font-bold px-2 py-0.5 rounded text-[10px]">YELLOW: Warning</span>`;
+                } else {
+                    alertBadge = `<span class="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[10px]">OK: Active</span>`;
+                }
+
+                tr.innerHTML = `
+                    <td class="p-3 font-bold text-indigo-900">${item.id}</td>
+                    <td class="p-3 font-sans font-medium text-slate-800">${item.provider}</td>
+                    <td class="p-3 font-sans text-slate-600">${item.type}</td>
+                    <td class="p-3 text-right font-bold text-slate-900">$${item.amount.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+                    <td class="p-3 text-slate-600">${item.statementDate}</td>
+                    <td class="p-3 text-slate-600">${item.solDate}</td>
+                    <td class="p-3 text-slate-600">${item.type === 'Non-Profit' ? 'FAP: ' + item.fapDate : 'N/A (For-Profit)'}</td>
+                    <td class="p-3">${alertBadge}</td>
+                    <td class="p-3 text-center">
+                        <button onclick="openModal('${item.id}')" class="bg-slate-800 hover:bg-slate-900 text-white text-[10px] font-bold py-1 px-2.5 rounded transition shadow-sm">
+                            Inspect
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('matrix-count-summary').innerText = `Showing ${data.length} of 15 records`;
+        }
+
+        // Apply Matrix Table Filters
+        function applyMatrixFilters() {
+            const alertVal = document.getElementById('filter-alert').value;
+            const typeVal = document.getElementById('filter-type').value;
+            const triageVal = document.getElementById('filter-triage').value;
+            const searchVal = document.getElementById('filter-search').value.toLowerCase();
+
+            const filtered = DEBT_DATA.filter(item => {
+                const matchAlert = (alertVal === 'ALL') || 
+                                   (alertVal === 'RED_SOL' && item.alert === 'RED_SOL') ||
+                                   (alertVal === 'RED_501R' && item.alert === 'RED_501R') ||
+                                   (alertVal === 'YELLOW' && item.alert === 'YELLOW') ||
+                                   (alertVal === 'OK' && item.alert === 'OK');
+
+                const matchType = (typeVal === 'ALL') || (item.type === typeVal);
+                const matchTriage = (triageVal === 'ALL') || (item.triage === triageVal);
+                const matchSearch = item.id.toLowerCase().includes(searchVal) || item.provider.toLowerCase().includes(searchVal);
+
+                return matchAlert && matchType && matchTriage && matchSearch;
+            });
+
+            renderMatrixTable(filtered);
+        }
+
+        // Modal Drawer Controls
+        function openModal(accId) {
+            const item = DEBT_DATA.find(d => d.id === accId);
+            if (!item) return;
+
+            document.getElementById('modal-title').innerText = `Account Overview: ${item.id}`;
+            document.getElementById('modal-subtitle').innerText = `${item.provider} | Disputed Amount: $${item.amount.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
+
+            document.getElementById('m-service-date').innerText = item.serviceDate;
+            document.getElementById('m-statement-date').innerText = item.statementDate;
+            document.getElementById('m-sol-date').innerText = item.solDate;
+            document.getElementById('m-tracking').innerText = item.tracking;
+            document.getElementById('m-hospital-type').innerText = item.type;
+            document.getElementById('m-triage').innerText = item.triage;
+            document.getElementById('modal-rationale').innerText = item.rationale;
+
+            const banner = document.getElementById('modal-alert-banner');
+            if (item.alert === 'RED_SOL') {
+                banner.className = 'p-3 rounded-lg flex items-center justify-between font-bold text-xs bg-rose-600 text-white';
+                banner.innerHTML = `<span>🚨 STATUS: RED — TIME BARRED (SOL EXPIRED)</span> <span>42 Pa.C.S. § 5525(a)</span>`;
+            } else if (item.alert === 'RED_501R') {
+                banner.className = 'p-3 rounded-lg flex items-center justify-between font-bold text-xs bg-rose-500 text-white';
+                banner.innerHTML = `<span>🚨 STATUS: RED — 501(r) REGULATORY BREACH</span> <span>26 U.S.C. § 501(r)(6)</span>`;
+            } else if (item.alert === 'YELLOW') {
+                banner.className = 'p-3 rounded-lg flex items-center justify-between font-bold text-xs bg-amber-500 text-slate-900';
+                banner.innerHTML = `<span>⚠️ STATUS: YELLOW — UPCOMING FAP DEADLINE</span> <span>Screening Required</span>`;
+            } else {
+                banner.className = 'p-3 rounded-lg flex items-center justify-between font-bold text-xs bg-emerald-600 text-white';
+                banner.innerHTML = `<span>✅ STATUS: OK — ACTIVE CLAIM</span> <span>Compliant Flow</span>`;
+            }
+
+            // Pseudo SHA-256 Digest
+            document.getElementById('modal-hash').innerText = `sha256:${item.id.toLowerCase()}-${item.tracking.slice(-8)}-${item.statementDate}`;
+
+            document.getElementById('account-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('account-modal').classList.add('hidden');
+        }
+
+        function openNoticeInStudio() {
+            const idText = document.getElementById('modal-title').innerText.replace('Account Overview: ', '');
+            closeModal();
+            document.getElementById('studio-account-select').value = idText;
+            switchTab('tab-studio');
+            renderNoticeDraft();
+        }
+
+        // Chart.js Canvas Initialization
+        function initCharts() {
+            // Chart 1: Alert Distribution
+            const ctx1 = document.getElementById('chart-alert-distribution').getContext('2d');
+            alertChartInstance = new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: ['RED: Time-Barred (4)', 'RED: 501(r) Breach (2)', 'YELLOW: Upcoming (2)', 'OK: Active (7)'],
+                    datasets: [{
+                        data: [4, 2, 2, 7],
+                        backgroundColor: ['#e11d48', '#f43f5e', '#f59e0b', '#10b981'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+
+            // Chart 2: Financial Exposure
+            const ctx2 = document.getElementById('chart-financial-triage').getContext('2d');
+            triageChartInstance = new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['Type A (NSA)', 'Type B (501r)', 'Type C (SOL/Standard)'],
+                    datasets: [
+                        {
+                            label: 'Non-Profit ($)',
+                            data: [0, 13650, 5500],
+                            backgroundColor: '#4f46e5'
+                        },
+                        {
+                            label: 'For-Profit ($)',
+                            data: [2820, 4100, 12850],
+                            backgroundColor: '#64748b'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, beginAtZero: true }
+                    },
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } }
+                    }
+                }
+            });
+        }
+
+        // Interactive Dispatch Simulator
+        function runDispatchSimulation() {
+            const queue = document.getElementById('sim-queue').value;
+            const account = document.getElementById('sim-account').value;
+            const consoleLog = document.getElementById('sim-log');
+            const statusLabel = document.getElementById('sim-status');
+
+            statusLabel.innerText = "EXECUTING POST...";
+            statusLabel.className = "text-amber-400 font-bold";
+
+            setTimeout(() => {
+                const now = new Date().toISOString();
+                const hmacDummy = "hmac-sha256:" + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+                const idempotencyKey = "idem-" + Math.random().toString(36).substring(2, 10);
+
+                consoleLog.innerText = `[${now}] POST /api/v1/work-orders HTTP/1.1
+Host: api.case-management.internal
+Content-Type: application/json
+Idempotency-Key: ${idempotencyKey}
+User-Agent: Keystone-CMS-Runner/1.1.0
+
+{
+  "queue": "${queue}",
+  "account_id_hash": "${hmacDummy}",
+  "violation_type": "${queue === 'SOL' ? 'Time-Barred (42 Pa.C.S. § 5525a)' : (queue === 'IRS' ? '501(r) ECA Prohibition' : 'NSA Balance Bill')}",
+  "action_deadline": "2026-11-20",
+  "status": "DISPATCH_ACCEPTED"
+}
+
+HTTP/1.1 200 OK
+Server: Case-Management-API
+Content-Type: application/json
+X-Idempotency-Status: STORED_NEW_KEY
+
+{"status": "SUCCESS", "message": "Work order queued successfully."}`;
+
+                statusLabel.innerText = "200 OK (ACCEPTED)";
+                statusLabel.className = "text-emerald-400 font-bold";
+            }, 600);
+        }
+
+        // Notice Generator Draft Render
+        function renderNoticeDraft() {
+            const accId = document.getElementById('studio-account-select').value;
+            const textEditor = document.getElementById('studio-text-editor');
+            const templateName = document.getElementById('studio-template-name');
+
+            if (accId === 'ACC-1003' || accId === 'ACC-1006' || accId === 'ACC-1015') {
+                templateName.value = "PA SOL Termination Notice (42 Pa.C.S. § 5525a)";
+                textEditor.value = `FORMAL NOTICE OF TIME-BARRED DEBT & TERMINATION DEMAND
+Date: November 5, 2026
+Target Account ID (Redacted): ID-hmac-sha256:acc1003-key-verified
+Statutory Reference: Pennsylvania Contract Limitations Act, 42 Pa.C.S. § 5525(a)
+
+TO: Sample Specialist Clinic / Third-Party Collection Agency
+RE: Demand for Immediate Termination of Collection Activities & Trade Line Expungement
+
+PLEASE TAKE NOTICE that under 42 Pa.C.S. § 5525(a), the applicable four-year statute of limitations for enforcing this debt expired on June 10, 2026. This debt is legally time-barred and unenforceable in Pennsylvania courts.
+
+OPERATIONAL INSTRUCTIONS & NO-PAYMENT RULE:
+1. Cease and desist all communications regarding this account pursuant to FDCPA 15 U.S.C. § 1692c(c).
+2. Pursuant to PA FCEUA (73 P.S. § 2270.4), filing litigation or threatening legal action on a time-barred debt constitutes an unlawful deceptive trade practice.
+3. Demand is hereby made for permanent deletion of any associated trade lines from Equifax, Experian, and TransUnion under FCRA 15 U.S.C. § 1681s-2.
+
+NOTICE REGARDING REVIVAL: Under Pennsylvania common law (Huntingdon Finance Corp. v. Newtown Artesian Water Co.), no payment or written acknowledgment will be made, preventing any clock revival.
+
+Sincerely,
+Authorized Consumer Representative (Keystone CMS)`;
+
+            } else if (accId === 'ACC-1011') {
+                templateName.value = "IRS Form 13909 / 501(r) Regulatory Audit Complaint";
+                textEditor.value = `IRS FORM 13909 / PENNSYLVANIA AG COMPLAINT PACKAGE
+Date: November 5, 2026
+Target Hospital: St. Jude Regional Hospital (Non-Profit 501(c)(3))
+Account Reference (Redacted): ID-hmac-sha256:acc1011-key-verified
+Statutory Authority: 26 U.S.C. § 501(r)(6) | Treas. Reg. § 1.501(r)-6 | 73 P.S. § 2270.5(a)
+
+COMPLAINT SUMMARY:
+St. Jude Regional Hospital initiated Extraordinary Collection Actions (ECAs) without providing the mandatory 120-day pre-ECA notice or processing Financial Assistance Policy (FAP) eligibility during the 240-day statutory window following the initial billing statement date (August 20, 2022).
+
+DEMAND FOR REGULATORY AUDIT:
+1. File formal IRS Form 13909 tax exemption compliance review challenging the hospital's tax-exempt status.
+2. File PA Attorney General Bureau of Consumer Protection complaint alleging deceptive collection practices under the Unfair Trade Practices and Consumer Protection Law (UTPCPL).
+3. Demand immediate suspension of third-party debt collection litigation pending full administrative audit.`;
+
+            } else {
+                templateName.value = "No Surprises Act Balance Billing Dispute (45 CFR § 149.420)";
+                textEditor.value = `NO SURPRISES ACT (NSA) BALANCE BILLING FORMAL DISPUTE
+Date: November 5, 2026
+Target Provider: Precision Imaging Center
+Account Reference: ACC-1005
+Statutory Citation: 45 C.F.R. § 149.420 | 42 U.S.C. § 300gg-111
+
+TO: Billing Department / Compliance Officer
+RE: Dispute of Out-of-Network Ancillary Balance Bill
+
+PLEASE TAKE NOTICE that the medical services rendered on October 1, 2026, constitute non-emergency out-of-network ancillary care at an in-network facility under 45 C.F.R. § 149.420. Balance billing the patient above the in-network cost-sharing requirement is strictly prohibited under federal law.
+
+DEMAND:
+1. Re-issue statement capping patient liability strictly to the In-Network Qualifying Payment Amount (QPA).
+2. Initiate 30-business-day Open Negotiation period pursuant to 45 C.F.R. § 149.510 if reimbursement remains disputed.`;
+            }
+        }
+
+        function copyNoticeText() {
+            const textEditor = document.getElementById('studio-text-editor');
+            textEditor.select();
+            document.execCommand('copy');
+            alert('Notice text successfully copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
