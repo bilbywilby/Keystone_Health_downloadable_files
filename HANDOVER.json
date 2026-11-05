@@ -1,0 +1,207 @@
+{
+  "document": "HANDOVER.json",
+  "project": "Pennsylvania Medical Debt Case Management System (CMS)",
+  "prepared_date": "2026-11-05",
+  "purpose": "Turnover of project state, decisions, open questions, and legal-content status to the development team.",
+  "scope_summary": "A dynamic case management system for Pennsylvania residents to dispute medical debts and surprise bills. It tracks statutory deadlines, issues priority alerts, maintains evidence chain of custody, and dispatches work orders to an internal case management API.",
+  "status_overview": {
+    "overall_state": "Partially implemented. Architecture and priority logic validated against a 15-account test dataset. Several scripts, tests, and CI configuration require fixes before release.",
+    "release_readiness": "Not ready. Blocking items are listed under blocking_issues.",
+    "legal_content_state": "Draft only. Consumer-facing letters and toolkit require counsel review before any public use."
+  },
+  "architecture": {
+    "pattern": "Transitioned from static dataset (data/debts.json) to a dynamic CMS.",
+    "risk_tiers": {
+      "tier_1_high": "Time-barred debts or 501(r) violations.",
+      "tier_2_medium": "NSA violations or unverified debt.",
+      "tier_3_low": "Legally enforceable debts."
+    },
+    "alert_system": {
+      "RED": "Statutory violations.",
+      "YELLOW": "Upcoming deadlines."
+    },
+    "event_triggers": "Deadlines are driven by USPS Certified Mail delivery dates.",
+    "queue_schema_fields": ["Account ID", "Document ID", "Violation Type", "Action Deadline", "Status"],
+    "evidence_chain_of_custody": "Records are linked to document identifiers via SHA-256 digests."
+  },
+  "repository_layout": {
+    "ci_workflow": ".github/workflows/python-ci.yml",
+    "data": "data/debts.json",
+    "scripts": [
+      "scripts/validate_schema.py",
+      "scripts/generate_action_lists.py",
+      "scripts/dispatch_work_orders.py",
+      "scripts/generate_notices.py"
+    ],
+    "tests": "tests/"
+  },
+  "functional_requirements": {
+    "statutory_timeline_verification": "Python test suite (pytest) plus GitHub Actions CI.",
+    "no_payment_rule": "Time-barred debts must not receive payments, which could restart the limitations clock.",
+    "work_order_dispatch": {
+      "transport": "HTTPS only, no redirects.",
+      "idempotency": "Receiver-side idempotency keys. Idempotency-key headers still need fixing.",
+      "env_requirements": ["DISPATCH_WEBHOOK_URL", "HMAC_SECRET (minimum 32 bytes)"],
+      "restriction": "Dispatch allowed only on pushes to the protected default branch."
+    },
+    "redaction": "Account and document identifiers must be redacted with keyed HMAC-SHA256 before dispatch to non-BAA channels."
+  },
+  "federal_and_state_authorities": {
+    "federal": [
+      "No Surprises Act (45 C.F.R. Part 149; including 149.110, 149.120, 149.420, 149.510)",
+      "IRC Section 501(r): 120-day ECA restriction and 240-day FAP application window, both measured from the first post-discharge billing statement",
+      "Fair Credit Reporting Act (dispute duties of furnishers; subsection citation to be confirmed)",
+      "FDCPA validation rule (15 U.S.C. 1692g) for third-party collectors",
+      "Regulation F time-barred debt rule (12 C.F.R. 1006.26)"
+    ],
+    "pennsylvania": [
+      "Fair Credit Extension Uniformity Act (73 P.S. 2270.1 et seq.); violations treated as UTPCPL violations under 73 P.S. 2270.5(a)",
+      "Contract statute of limitations, 4 years (42 Pa.C.S. 5525(a)); affirmative defense must be pleaded under Pa.R.C.P. 1030",
+      "Wage exemption (42 Pa.C.S. 8127)",
+      "Insurance Department external review (Act 146 of 2022; codified section to be confirmed)"
+    ]
+  },
+  "decisions": [
+    "Transitioned from static dataset to dynamic CMS.",
+    "Adopted receiver-side idempotency for work-order dispatch.",
+    "Restricted dispatch to pushes on the protected default branch."
+  ],
+  "blocking_issues": [
+    {
+      "area": "CI pipeline",
+      "issue": "Workflow lacks a Python version matrix (3.10, 3.11, 3.12) and branch guards on dispatch.",
+      "action": "Add matrix and restrict dispatch job to protected default branch pushes."
+    },
+    {
+      "area": "Dispatcher (scripts/dispatch_work_orders.py)",
+      "issue": "Missing idempotency headers, redaction leakage, import errors.",
+      "action": "Add idempotency key headers, redact identifiers with keyed HMAC-SHA256 for non-BAA channels, fix imports."
+    },
+    {
+      "area": "Notice generator (scripts/generate_notices.py)",
+      "issue": "Runtime crashes from missing returns and imports; incorrect 501(r) date logic; redaction leakage.",
+      "action": "Fix returns and imports. Compute 120-day and 240-day windows from the first post-discharge billing statement date, not from default or service dates."
+    },
+    {
+      "area": "Test suite (tests/)",
+      "issue": "Import errors and fixture usage problems.",
+      "action": "Repair imports and fixtures; add tests for statutory timelines, RED/YELLOW alert logic, and no-payment enforcement."
+    },
+    {
+      "area": "Dispatch secret handling",
+      "issue": "HMAC_SECRET must be at least 32 bytes.",
+      "action": "Validate length at startup and fail closed if it is shorter."
+    }
+  ],
+  "open_questions": [
+    {
+      "id": "Q1",
+      "question": "Receiving API payload schema and idempotency-key retention policy.",
+      "owner": "API team",
+      "status": "Open"
+    },
+    {
+      "id": "Q2",
+      "question": "Pennsylvania rules on revival of time-barred debt through payment or acknowledgment.",
+      "owner": "Counsel",
+      "status": "Open. Required before finalizing no-payment rule wording and SOL revival language."
+    },
+    {
+      "id": "Q3",
+      "question": "Whether dataset records constitute PHI, which determines storage and dispatch rules.",
+      "owner": "Privacy/compliance",
+      "status": "Open"
+    },
+    {
+      "id": "Q4",
+      "question": "Accrual rule for the 4-year contract SOL (breach/default date versus last payment date) and the breach dates for the 15 test accounts.",
+      "owner": "Counsel and data team",
+      "status": "Open"
+    },
+    {
+      "id": "Q5",
+      "question": "FAP application status for each 501(r) account.",
+      "owner": "Operations",
+      "status": "Open"
+    },
+    {
+      "id": "Q6",
+      "question": "Counsel approval of SOL revival language and 501(r) complaint citations.",
+      "owner": "Counsel",
+      "status": "Open"
+    }
+  ],
+  "legal_content_status": {
+    "documents": ["SOL Termination Notice (draft)", "501(r) Regulatory Complaint letter (draft)", "Consumer toolkit and dispute templates (draft)"],
+    "citations_verified": [
+      "42 Pa.C.S. 5525(a) and Pa.R.C.P. 1030 (affirmative defense)",
+      "45 C.F.R. 149.110, 149.120, 149.420, 149.510 (NSA; IDR is provider-plan process, not consumer-initiated)",
+      "73 P.S. 2270.5(a) (FCEUA violations as UTPCPL violations)",
+      "Regulation F time-barred debt rule and validation timing"
+    ],
+    "citations_unverified_do_not_publish": [
+      {
+        "citation": "Huntingdon Fin. Corp. v. Int'l Packaging Corp., 659 A.2d 1054 (Pa. Super. 1995)",
+        "note": "Case name and reporter could not be confirmed. The verifiable Pennsylvania Superior Court case is Huntingdon Finance Corp. v. Newtown Artesian Water Co., 442 Pa. Super. 406 (1995). Counsel must confirm holding."
+      },
+      {
+        "citation": "Cole v. Lawrence, 701 A.2d 987 (Pa. Super. 1997)",
+        "note": "Could not be verified. Remove from consumer-facing text."
+      },
+      {
+        "citation": "40 P.S. 2164.2 (external review section)",
+        "note": "Could not be confirmed. Program is described as Act 146 of 2022."
+      },
+      {
+        "citation": "Treas. Reg. 1.501(r)-6 versus 1.501(r)-5 for the 120-day and 240-day windows",
+        "note": "Secondary sources point to 1.501(r)-6(c) for the 120-day restriction and 1.501(r)-1(b)(3) for the FAP application period. Confirm against regulation text."
+      },
+      {
+        "citation": "FCRA 15 U.S.C. 1681s-2 subsection",
+        "note": "Earlier draft cited (a)(8); the latest draft cites (a)(3) and (b). Confirm before publication."
+      },
+      {
+        "citation": "FCEUA 2-year limitations period",
+        "note": "Not supported by sources reviewed. Removed from drafts. Counsel to confirm applicable period."
+      },
+      {
+        "citation": "Wage exemption rent exception cite",
+        "note": "Exact statutory cite for the 10 percent residential rent exception still needs verification."
+      }
+    ],
+    "factual_claims_to_verify": [
+      "PID external review first-year overturn figure (reported as 259 of 517, about 50.1 percent). Do not present as a prediction.",
+      "PID external review filing deadline: four months from final adverse benefit determination. Some third-party sites cite 120 days; the determination letter controls.",
+      "Federal medical debt credit reporting rule: reportedly vacated in July 2025. Confirm current status before any consumer statement."
+    ],
+    "pending_legislation": "PA HB 1731 (proposed 3-year limit on consumer debt suits). Not enacted. Describe only as pending."
+  },
+  "consumer_document_corrections_applied": [
+    "Removed unsupported payment-resets-clock language; replaced with fact-dependent acknowledgment doctrine wording.",
+    "Corrected validation window to run from receipt of the validation notice.",
+    "Removed unsupported 2-year FCEUA limitation.",
+    "Changed UTPCPL remedies to 'may seek' and noted treble damages are discretionary.",
+    "Replaced LaTeX notation with plain text in consumer-facing material. Note: the latest toolkit draft still contains LaTeX-style notation and needs reformatting.",
+    "Clarified that 501(r) protections apply to 501(c)(3) hospitals only."
+  ],
+  "known_gaps_in_latest_toolkit_draft": [
+    "The warning box still contains the unverified Huntingdon citation (659 A.2d 1054).",
+    "The consumer toolkit still contains LaTeX-style notation.",
+    "The matrix still attributes the 120-day and 240-day windows to Treas. Reg. 1.501(r)-6 and marks them as counsel-to-confirm.",
+    "The FCRA subsection cite is inconsistent across drafts.",
+    "The 2-year FCEUA deadline in Part 2 Step 4 should be removed if the earlier correction is applied."
+  ],
+  "publication_gate": {
+    "consumer_toolkit": "Blocked until counsel verifies all items in legal_content_status and the corrections above are applied.",
+    "internal_code": "Blocked until blocking_issues are resolved and CI passes on Python 3.10, 3.11, and 3.12."
+  },
+  "next_actions": [
+    {"priority": 1, "action": "Resolve Q2 (time-barred revival) and Q4 (accrual rule) with counsel. These affect the no-payment rule logic."},
+    {"priority": 2, "action": "Fix dispatcher, notice generator, and test suite per blocking_issues."},
+    {"priority": 3, "action": "Add CI matrix and branch guards."},
+    {"priority": 4, "action": "Obtain receiving API schema (Q1) and implement payload mapping."},
+    {"priority": 5, "action": "Resolve PHI determination (Q3) before finalizing storage and dispatch rules."},
+    {"priority": 6, "action": "Submit legal drafts and verification list to counsel (Q6)."}
+  ],
+  "handover_notes": "This file records project state as of 2026-11-05. No secrets, credentials, or client identifiers are included. Environment values are named but not provided. Developers should treat all legal citations as unverified until counsel signs off."
+}
