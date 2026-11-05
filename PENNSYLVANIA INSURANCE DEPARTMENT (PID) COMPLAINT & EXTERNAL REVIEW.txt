@@ -1,0 +1,114 @@
+================================================================================
+TEMPLATE #10: PENNSYLVANIA INSURANCE DEPARTMENT (PID) COMPLAINT & EXTERNAL REVIEW
+================================================================================
+INSTRUCTIONS: Use this formal complaint narrative when submitting a dispute to the 
+Pennsylvania Insurance Department (PID) Bureau of Consumer Services. This applies 
+to FULLY INSURED plans or managed care coverage in Pennsylvania following an adverse 
+benefit determination, balance bill violation, or failure to resolve an Act 146 
+external review / No Surprises Act dispute.
+
+SUBMISSION PATHWAY:
+1. Online Portal: https://www.insurance.pa.gov (Consumer Complaint Portal)
+2. Toll-Free Phone Assistance: 1-877-881-6388
+3. Mail / Email: Attach this completed narrative with supporting documents.
+================================================================================
+
+FORMAL CONSUMER COMPLAINT & REQUEST FOR REGULATORY INTERVENTION
+
+I. CONSUMER & POLICYHOLDER INFORMATION
+--------------------------------------------------------------------------------
+Complainant / Patient Name: [YOUR FULL NAME]
+Mailing Address: [YOUR STREET ADDRESS, CITY, STATE, ZIP CODE]
+Telephone Number: [YOUR PHONE NUMBER]
+Email Address: [YOUR EMAIL ADDRESS]
+
+Insurance Company / Plan Name: [INSURANCE CARRIER NAME]
+Member / Subscriber ID: [MEMBER ID NUMBER]
+Group / Policy Number: [GROUP OR POLICY NUMBER]
+Plan Type: [ ] Fully Insured Commercial  [ ] PA Managed Care (HMO/PPO)  [ ] Other
+
+II. RESPONDENT ENTITY DETAILS (PROVIDER / FACILITY / COLLECTOR)
+--------------------------------------------------------------------------------
+Provider / Facility Name: [HOSPITAL OR PROVIDER NAME]
+Billing Entity / Collection Agency (if applicable): [COLLECTION AGENCY NAME]
+Account / Invoice Number(s): [ACCOUNT NUMBER(S)]
+Claim / EOB Number(s): [CLAIM OR EOB NUMBER(S)]
+Date(s) of Service: [SERVICE DATE(S)]
+Total Disputed Amount: $[AMOUNT]
+
+III. STATEMENT OF COMPLAINT & STATUTORY GROUNDS FOR REGULATORY RELIEF
+--------------------------------------------------------------------------------
+The undersigned policyholder hereby files this formal complaint with the Pennsylvania 
+Insurance Department requesting regulatory investigation, enforcement, and an 
+independent external review determination regarding illegal balance billing and/or 
+improper denial of coverage.
+
+This complaint is grounded on the following state and federal statutory protections:
+
+A. NO SURPRISES ACT & 45 C.F.R. PART 149:
+   The disputed service constitutes [ emergency care / an out-of-network ancillary 
+   service performed at an in-network facility / air ambulance transport ]. Under 
+   45 C.F.R. § 149.110 and § 149.120, out-of-network providers are prohibited from 
+   balance billing covered enrollees beyond in-network cost-sharing requirements 
+   (Qualifying Payment Amount - QPA). The carrier and provider failed to properly 
+   adjudicate this claim in accordance with federal and state surprise billing standards.
+
+B. PENNSYLVANIA ACT 146 OF 2022 (40 P.S. § 991.2161 ET SEQ.):
+   Pursuant to Act 146 (SB 225), Pennsylvania enrollees maintain the statutory 
+   right to initiate an independent external review of adverse benefit determinations 
+   and coverage denials. The insurer's final internal appeal determination failed 
+   to adhere to statutory clinical necessity, prior authorization, or emergency 
+   coverage mandates.
+
+C. PA FAIR CREDIT EXTENSION UNIFORMITY ACT (FCEUA - 73 P.S. § 2270.1 ET SEQ.):
+   The provider and/or its collection agency have engaged in unfair and deceptive 
+   collection practices pursuant to 73 P.S. § 2270.4 by pursuing collection 
+   communications and threatening credit bureau reporting on an account subject 
+   to an active, formal statutory dispute.
+
+IV. FACTUAL CHRONOLOGY OF THE DISPUTE
+--------------------------------------------------------------------------------
+1. Service Rendered: On [DATE], I received medical services at [FACILITY NAME]. 
+   This care was rendered on an [ emergency / scheduled in-network facility ] basis.
+2. Initial Billing & EOB: On [DATE], I received an Explanation of Benefits (EOB) 
+   and subsequent balance bill charging $[AMOUNT] in out-of-network balance charges.
+3. Timely Dispute Issued: On [DATE], I sent a formal written dispute and demand 
+   for balance bill adjustment via USPS Certified Mail (Tracking #[TRACKING NUMBER]) 
+   to [PROVIDER/CARRIER NAME].
+4. Failure to Resolve / Adverse Determination: On [DATE], [PROVIDER/CARRIER] 
+   [ rejected the dispute / failed to issue a corrected EOB / continued collection 
+   demands ], forcing this escalation to the Department.
+
+V. SPECIFIC RELIEF REQUESTED FROM THE PENNSYLVANIA INSURANCE DEPARTMENT
+--------------------------------------------------------------------------------
+I respectfully request that the Department order the following administrative relief:
+
+1. Initiate a formal inquiry with [INSURANCE CARRIER] and [PROVIDER] regarding 
+   compliance with No Surprises Act balance billing prohibitions and Act 146 rules.
+2. Order [INSURANCE CARRIER] to re-adjudicate Claim #[CLAIM NUMBER] using the 
+   in-network cost-sharing rate and Qualifying Payment Amount (QPA).
+3. Order [PROVIDER/COLLECTOR] to immediately issue a written hold on all collection 
+   activity and withdraw any derogatory credit reporting pending regulatory review.
+4. Direct an independent external review under Act 146 if required to resolve 
+   medical necessity or coverage scope determinations.
+
+VI. VERIFICATION & SUPPORTING ATTACHMENTS
+--------------------------------------------------------------------------------
+I verify that the statements made in this complaint are true and correct to the 
+best of my knowledge, information, and belief.
+
+Respectfully submitted,
+
+__________________________________________
+[YOUR SIGNATURE]
+
+[YOUR PRINTED NAME]
+Date: [MM/DD/YYYY]
+
+ATTACHMENTS ENCLOSED:
+[ ] Copy of Provider Billing Statement / Invoice
+[ ] Copy of Explanation of Benefits (EOB) from Insurance Carrier
+[ ] Copy of Timely Written Dispute Letter sent to Provider/Carrier
+[ ] USPS Certified Mail Return Receipt / Delivery Confirmation
+[ ] Written Final Denial / Adverse Benefit Determination Letter (if received)
+================================================================================
