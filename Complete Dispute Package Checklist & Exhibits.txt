@@ -1,0 +1,22 @@
+Complete Dispute Package Checklist & Exhibits
+1. Exhibit A: The Primary Billing Statement & Itemized Invoice
+What it is: The official statement, balance notice, or itemized bill received from the provider or hospital billing department.
+Why it’s needed: Establishes the exact date of service, provider NPI/TIN, specific CPT/HCPCS codes billed, and the gross financial amount demanded.
+2. Exhibit B: Insurance Documentation or Good Faith Estimate (GFE)
+For Insured / Out-of-Network Claims: Include the full Explanation of Benefits (EOB) or denial notice from your health plan, showing what the insurer allowed, what was applied to your deductible/coinsurance, and any balance billing notices.
+For Uninsured / Self-Pay Claims: Include the original Good Faith Estimate (GFE) provided by the convening provider prior to scheduling the service. Under federal rules (45 CFR § 149.620), you are eligible for dispute resolution if the final billed charges exceed the GFE by $400 or more.
+3. Exhibit C: The FMV & MPFS Benchmark Calculation Sheet
+What it is: The detailed mathematical reference sheet developed in the previous step, breaking down National RVUs, Pennsylvania GPCI regional multipliers, the 2026 Medicare Conversion Factor ($33.4009), and commercial scaling factors.
+Why it’s needed: Replaces subjective chargemaster pricing with an objective, verifiable economic benchmark.
+4. Exhibit D: Clinical Notes or Encounter Summaries (If Applicable)
+What it is: Relevant extracts from your medical records, discharge summary, or operative notes that describe the actual intensity, time, and medical decision-making involved.
+Why it’s needed: Proves that the service billed matched the coding criteria (e.g., verifying that a 99214 visit genuinely met the moderate medical decision-making or time threshold).
+5. Exhibit E: Proof of Prior Communication / Good Faith Attempt to Resolve
+What it is: Copies of prior emails, certified mail tracking receipts, or portal message transcripts showing you attempted to contact the provider's billing department or patient financial services to request an itemized review.
+Suggested Assembly Order for Your Dispute Packet
+Cover Letter / Formal Dispute Notice (Summarizing your request and pointing to the exhibits)
+Exhibit A: Itemized Billing Statement
+Exhibit B: Insurance EOB or Original GFE
+Exhibit C: FMV Calculation Reference Sheet
+Exhibit D: Clinical / Encounter Documentation (if required for coding validation)
+Exhibit E: Postal or Electronic Communication History
