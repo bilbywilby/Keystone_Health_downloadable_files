@@ -1,0 +1,280 @@
+# The Consumer Playbook: Dos & Don'ts for Fighting a Medical Bill in Pennsylvania
+### Companion Guide to the Keystone Health Medical Debt Defense Framework (Rev. 4.1 — 05 Nov 2026)
+
+> **Disclaimer:** This guide is general educational information, not legal advice. Rules vary by situation, and statutes and agency procedures change. Items marked **[VERIFY]** should be confirmed against current primary sources before you rely on them. If a lawsuit has been filed against you, or a large amount is at stake, consult a Pennsylvania legal aid office or a consumer-rights attorney before acting.
+
+---
+
+## How to Use This Guide
+
+This document organizes every practical rule into eight categories:
+
+1. **First Moves** — what to do in the first days after receiving a bill
+2. **Paperwork & Records** — building your evidence file
+3. **Communication** — phone calls, email, letters, and who to talk to
+4. **Payments** — the single most dangerous area for unwary consumers
+5. **Deadlines & Timelines** — the clocks you must know
+6. **Credit & Collectors** — protecting your credit report and dealing with agencies
+7. **Escalation & Regulators** — when and how to bring in the government
+8. **Digital Footprint & Personal Conduct** — what not to post, sign, or say
+
+Each section pairs **DO** items (actions that protect you) with **DON'T** items (actions that destroy leverage). The stakes are asymmetric: most mistakes cannot be undone, while most correct steps simply preserve options.
+
+---
+
+# 1. FIRST MOVES
+
+## DO
+
+- **DO open every envelope.** Ignoring medical mail is the most common self-inflicted wound. Bills, EOBs (Explanation of Benefits), and "final notices" all start clocks that run whether or not you read them.
+- **DO respond in writing within the first 30 days.** Even a short letter saying "I dispute this balance and request an itemized bill" preserves your position while you investigate.
+- **DO get the full picture before arguing.** Request three documents immediately:
+  1. An **itemized bill** from the provider (line-item charges, not a lump sum)
+  2. The **EOB** from your insurer showing what was paid, written off, and charged to you
+  3. Your plan's **in-network cost-sharing calculation** for the service, if available
+- **DO identify the type of service first.** Emergency care, ancillary care (anesthesiology, radiology, pathology, neonatology) at an in-network facility, and air ambulance are protected by the federal No Surprises Act. Scheduled care by an out-of-network provider may not be — the rules differ, and your strategy depends on the category.
+- **DO check whether the facility is a nonprofit hospital.** If it is a 501(c)(3) hospital organization, federal law (IRC § 501(r)) gives you charity-care leverage that doesn't exist anywhere else. Ask the billing office directly and in writing: "Is this facility a 501(c)(3) tax-exempt hospital organization?"
+- **DO verify your insurance network status at the time of service.** Network contracts change mid-year. The provider's network status on the date of service — not today — controls.
+- **DO photograph or scan everything the day you receive it**, including envelopes with postmarks (postmarks prove when you learned of the bill).
+- **DO calendar every date** the moment you see it: billing statement date, 120-day mark, 240-day mark, appeal deadlines, hearing dates.
+
+## DON'T
+
+- **DON'T pay anything yet.** A payment feels like progress but can legally function as an acknowledgment of the debt. Investigate first; pay never during an open dispute.
+- **DON'T call and vent.** Everything you say on the phone can be noted in your account record and quoted back to you. Call only to request documents, and follow up in writing.
+- **DON'T sign anything at the billing office, on a collector's website, or on a "payment portal" link** until you've read it completely. Signing an intake or payment agreement mid-dispute can create a *new*, clean debt that erases your defenses to the old one.
+- **DON'T ignore a bill because you believe it's wrong.** Being right about the law does not stop a credit report entry, a collections referral, or a lawsuit. Only written action does.
+- **DON'T assume the insurer is on your side.** Sometimes the *insurer's* error (processing a claim out-of-network, misapplying your deductible) caused the balance bill. Sometimes the insurer benefits from you giving up. Verify independently.
+- **DON'T wait for a "final notice" to act.** By the time a final notice arrives, you may have burned through charity-care and dispute windows.
+
+---
+
+# 2. PAPERWORK & RECORDS
+
+## DO
+
+- **DO keep one master file** — physical folder or encrypted digital folder — containing:
+  - Every bill, statement, and reminder notice
+  - Every EOB
+  - Every letter you send (complete copies, not just drafts)
+  - Every letter you receive, in the envelope it came in
+  - Discharge paperwork, intake forms you signed at registration (especially any "Financial Responsibility" or "Assignment of Benefits" agreement)
+  - Any notice-and-consent form the provider asked you to sign
+  - Screenshots of any online patient-portal billing messages
+- **DO write a contemporaneous log of every interaction**, same day:
+  - Date and time
+  - Who you spoke with (get full names and representative/badge IDs)
+  - What was said, as close to verbatim as you can manage
+  - What you requested and what was promised
+- **DO send every substantive letter by Certified Mail with Return Receipt Requested.** Log the tracking number, mailing date, delivery date, and signer. A dispute you cannot prove was delivered is, for practical purposes, a dispute that never happened.
+- **DO keep the green return-receipt cards** with your file, matched to the tracking number in your log.
+- **DO request your intake paperwork in writing.** Many consumers discover later that a consent form they never saw, or a financial-responsibility clause they never read, is the backbone of the provider's collection theory. Get your signature on file reviewed.
+- **DO preserve the notice-and-consent paperwork if it exists.** Under 45 C.F.R. § 149.420, a federal consent waiver is void unless it was provided at least 72 hours before service (with narrow exceptions for short-notice scheduling **[VERIFY]** the current regulatory text), included a good-faith estimate, and stated that signing was optional. A defective waiver is a complete defense to the balance bill — but only if you can show what (and when) you were actually given.
+- **DO back everything up in two places.** Houses flood, laptops die, clouds get locked.
+- **DO save voicemails.** If a collector leaves a message that threatens, misrepresents, or calls about a debt you've disputed in writing, that voicemail is evidence. Export or record it per your state's recording-consent rules (Pennsylvania is an all-party consent state for call recordings **[VERIFY]** before recording any call).
+
+## DON'T
+
+- **DON'T throw away envelopes, statements, or "junk mail" from the provider or any collector** until the matter is fully resolved — postmarks and meter stamps are evidence of timing.
+- **DON'T mark up originals in ways you can't reverse.** Highlight copies; annotate photocopies; keep originals pristine.
+- **DON'T let family members write in your file or speak for you on recorded lines** unless you intend them to be your authorized representative — mixed authorship muddies the record.
+- **DON'T summarize conversations only in your memory.** Memory fades precisely when you need it — at a hearing, in a regulator interview, or in a settlement negotiation twelve months later.
+- **DON'T email sensitive documents (SSN, full account numbers, medical records) to unverified addresses.** Confirm the recipient's billing-office address by phone using a number from the provider's official website, not from the bill itself.
+- **DON'T rely on the patient portal as your only record.** Portals purge messages and archives; download anything important as PDF.
+
+---
+
+# 3. COMMUNICATION
+
+## DO
+
+- **DO communicate in writing whenever the subject is money owed.** Writing creates a record; phone calls create confusion.
+- **DO keep every conversation short, factual, and boring.** Your script is: *"I am disputing this balance in writing. Please send me an itemized bill and stop collection activity while the dispute is pending. Please note my account accordingly."* Then stop talking.
+- **DO ask for names and IDs.** "May I have your first and last name and your representative ID?" is a reasonable request, and the hesitation it provokes is itself informative.
+- **DO state clearly and early that the account is in dispute.** Repetition matters: say it on the phone, then confirm it in writing the same day. Collectors are required to treat disputed debts differently, and a documented dispute dates back to your first written notice.
+- **DO direct all substantive letters to the billing department *and* the compliance or legal department** for larger providers. Front-line billing staff often cannot bind the organization; compliance staff can.
+- **DO give a single mailing address for all correspondence** and insist it be used. Scattered correspondence to old addresses is a classic tactic (or accident) that causes consumers to miss hearing notices.
+- **DO keep your tone professional, even when theirs isn't.** Regulators read these letters. A calm, dated, well-organized complaint with attached evidence outperforms an angry one every time.
+- **DO say "I do not acknowledge this debt" if pushed for a commitment on the phone** — then repeat it in writing.
+- **DO clarify roles politely:** the billing rep is not your adversary-in-fact; the system is. The person who answers the phone usually did not cause the error, and courtesy costs you nothing.
+
+## DON'T
+
+- **DON'T explain your finances, assets, employment, or family situation to a collector.** That information is used to evaluate how and where to collect from you — not to help you.
+- **DON'T admit the debt is valid, even partially.** Phrases to avoid: *"I know I owe something,"* *"I'll pay what I can,"* *"I just want this to go away."* Each can be treated as an acknowledgment.
+- **DON'T negotiate against yourself.** If asked "What can you pay?", the correct answer is *"Nothing, until I receive the itemized bill and my insurer's EOB, and until my written dispute is resolved."*
+- **DON'T accept a "settlement" on the first call.** Early settlement offers are usually priced for consumers who haven't asserted their rights. They are still available later.
+- **DON'T rely on verbal promises — ever.** "We'll take it off your credit report," "we'll hold the account," "your insurance will probably cover it" mean nothing until they arrive in writing on letterhead.
+- **DON'T engage with collection text messages beyond asking (in writing) for written validation.** Scams impersonating medical billers are rampant; independently verify the collector exists using your state licensing records and the CFPB company database before responding.
+- **DON'T be baited into anger or insults** on recorded lines. Some collection operations deliberately provoke reactions; the recording then becomes "evidence of an unreasonable debtor."
+- **DON'T let a collector rush you.** "This offer expires at 5 p.m." — a genuine statutory deadline will be in writing with a legal citation. Manufactured urgency is a sales tactic.
+
+---
+
+# 4. PAYMENTS — THE MOST DANGEROUS AREA
+
+## DO
+
+- **DO understand the cardinal rule: no payment of any size while a dispute is open.** This is the rule from which there is no recovering. In Pennsylvania, a partial payment or a signed payment agreement can restart the four-year statute of limitations on a written-contract debt (42 Pa.C.S. § 5525(a)(8); effect of acknowledgment under 42 Pa.C.S. § 5533(b) **[VERIFY]** the exact provision and its application to your facts).
+- **DO pay your legitimate, undisputed in-network cost-sharing obligation separately** if it is cleanly severable from the disputed balance — and do it only after the correct amount is confirmed in writing by both insurer and provider. Paying what you truly owe, promptly and precisely, strengthens your credibility; paying "something toward the total" destroys your legal position.
+- **DO get every discount, charity-care award, or write-down in writing before paying** the reduced amount. A verbal "we'll take 40% off" followed by a payment can leave you owing the rest with your limitations defense gone.
+- **DO pay only by traceable methods** (check, card, official portal) — never cash, gift cards, wire transfers, cryptocurrency, or payment apps to individuals. Legitimate providers do not accept gift cards.
+- **DO reconcile every payment against the itemized bill afterward**, and obtain a zero-balance or adjusted-balance statement within 30 days.
+- **DO ask about hospital financial assistance *before* assuming you must pay.** Nonprofit hospitals must maintain Financial Assistance Policies (FAPs), must accept applications for at least 240 days after the first post-discharge statement, and must charge FAP-eligible patients no more than the Amounts Generally Billed (AGB). Middle-income households are frequently eligible and never apply.
+- **DO document any payment the provider refunds** and confirm the corresponding credit-report deletion in writing.
+
+## DON'T
+
+- **DON'T make "good faith" micro-payments.** $10, $25, $50 — the amount is irrelevant. What matters is what the payment *legally signifies*: acknowledgment of the debt and, potentially, a restarted limitations clock. A $5 payment can convert a time-barred debt into a collectible one.
+- **DON'T sign a payment plan, "resolution agreement," "settlement and release," or consent-to-judgment form** during an open dispute without independent legal review. Some documents waive your NSA, FCEUA, and UTPCPL claims; some include confessions of judgment; some quietly revive expired limitations periods.
+- **DON'T put a disputed medical bill on a credit card or take out a "medical financing" loan (including third-party lender programs offered at the hospital front desk).** That converts a legally protected, disputable medical debt into an ordinary consumer debt with fewer defenses, a different limitations period, and no charity-care pathway. It is almost always a strategic error.
+- **DON'T pay a collector before independently verifying the debt.** Require written validation of the debt and compare it line-by-line against your own itemized bill and EOB. Wrong-party, wrong-amount, and duplicate-billing errors in collections are common.
+- **DON'T let an autopay enrollment survive a dispute.** Cancel autopay arrangements that would draft payments on a disputed account.
+- **DON'T accept "we'll waive it if you pay today" pressure.** Legitimate waivers survive a week of verification.
+- **DON'T use funds legally protected from collection (Social Security, pensions, certain benefits) to pay a disputed bill** if the underlying obligation is itself invalid — but if you do pay a *valid* bill from protected funds, understand that protection applies to collection, not to voluntary payment.
+
+---
+
+# 5. DEADLINES & TIMELINES
+
+## DO
+
+- **DO learn the four clocks that matter most:**
+
+| Clock | Duration | What It Governs | Start Point |
+|---|---|---|---|
+| **ECA prohibition window** | 120 days | Nonprofit hospitals may take no Extraordinary Collection Action (credit reporting, liens, lawsuits, garnishment) | First post-discharge billing statement |
+| **FAP application window** | 240 days | Nonprofit hospital must accept and process your financial-assistance application | First post-discharge billing statement |
+| **Statute of limitations** | 4 years | Time the provider has to *sue* on a written-contract medical debt | Date of default (generally when payment was due) **[VERIFY]** current numbering, 42 Pa.C.S. § 5525(a)(8) |
+| **Open negotiation / IDR** | 30 business days + federal IDR window | Payer–provider payment dispute | Per 45 C.F.R. §§ 149.500, 149.510 — patient does not file, but timing affects your complaint |
+
+**[VERIFY]** all current timing rules against 26 C.F.R. § 1.501(r)-6 and current regulations before relying on them in a filing.
+
+- **DO count dates yourself from the first post-discharge statement** and calendar them. Do not trust the hospital's own count of "when our window started."
+- **DO submit charity-care/FAP applications early in the 240-day window** even if you think you might not qualify. A *complete* application submitted inside the window triggers retroactive reversal of collections if you are found eligible.
+- **DO keep proof of when your FAP application was deemed "complete"** — the 240-day clock and the hospital's obligations key off completeness, not receipt.
+- **DO file internal insurance appeals within the plan's stated deadline** (commonly 180 days for many plans, but it varies **[VERIFY]** with your plan documents — the Summary Plan Description or plan booklet controls).
+- **DO note that external review deadlines after a final internal denial are short** — often 4 months for federal standard external review **[VERIFY]** the current deadline applicable to your plan type — so escalate immediately upon an internal denial, not "eventually."
+- **DO re-verify deadlines in any denial letter against the statute itself.** Denial letters sometimes state deadlines shorter than the law allows.
+
+## DON'T
+
+- **DON'T assume the 120-day ECA window means "nothing can happen for four months."** Hospitals frequently and improperly jump the gun. Your protection depends on catching the violation — calendar day 121 with an audit of what happened before it.
+- **DON'T let the 240-day FAP window close while "waiting to gather documents."** Submit what you have with a cover letter noting incompleteness; ask what's missing in writing.
+- **DON'T confuse the statute of limitations with the billing window.** The provider can send statements, report to credit bureaus, and make demands long after you can still be sued — and vice versa. The SOL controls only lawsuits.
+- **DON'T silently allow a limitations period to run on *your own* claims.** Your FDCPA claims against third-party collectors carry a one-year federal deadline (15 U.S.C. § 1692k(d)); state-law claims have their own periods. If a collector violates your rights, note the date immediately.
+- **DON'T count on grace.** "Usually they don't sue over amounts under $X" is folklore, not law. Suits over modest balances — sometimes under $1,000 — are routine in some jurisdictions.
+
+---
+
+# 6. CREDIT & COLLECTORS
+
+## DO
+
+- **DO pull your credit reports from all three bureaus** (Equifax, Experian, TransUnion) via the official annualcreditreport.com channel while the dispute is pending, so you detect unauthorized tradelines immediately.
+- **DO dispute in writing with each bureau** any tradeline that reports a balance you've formally disputed, noting the pendency of your statutory dispute and attaching your certified-mail proof.
+- **DO use the Method of Verification process:** if a bureau verifies inaccurate information, you may demand a description of the procedure used to verify it; their answer (or silence) feeds a CFPB complaint.
+- **DO send the collector a written dispute/validation request immediately** upon first contact. Under the federal FDCPA, disputing in writing within 30 days of the validation notice obligates a third-party collector to suspend collection until it provides verification (15 U.S.C. § 1692g) — and Pennsylvania's FCEUA applies debt-collection conduct rules to original creditors like hospitals as well (73 P.S. § 2270.1 et seq.; exact subsections **[VERIFY]**).
+- **DO log every collector call** in your interaction log: date, time, number called from, caller name and agency, substance, and any statements about credit reporting, lawsuits, or wage garnishment.
+- **DO watch for prohibited collection tactics and document each one:** calls before 8 a.m. or after 9 p.m. local time, calls to your workplace after being told not to, contacts with third parties about your debt, threats of arrest, threats of action the collector can't or won't take, collection of amounts not owed, or continued collection after a written dispute.
+- **DO check whether the collector is licensed** to collect in Pennsylvania **[VERIFY]** current PA licensing requirements — collection by an unlicensed entity is an additional violation lever.
+- **DO notify the provider in writing that any referral of the disputed account to a collector or credit bureau while the statutory dispute is pending may violate the FCEUA** and can constitute a per se violation of the UTPCPL (73 P.S. § 2270.5(a)), exposing them to treble damages and attorney's fees.
+
+## DON'T
+
+- **DON'T talk strategy with collectors.** They are trained negotiators for the other side. Information you volunteer will be used; silence costs you nothing.
+- **DON'T confirm personal data** (SSN, DOB, address) to an inbound caller. Look up the agency independently and call back on its official number.
+- **DON'T make promises on collector calls** ("I'll pay next Friday") — broken promises become Exhibit A in collection lawsuits and refresh acknowledgment arguments.
+- **DON'T ignore a court summons because "it's probably a mistake."** A default judgment is the single worst outcome in debt collection: it eliminates your defenses and opens the door to post-judgment execution. If served, respond by the deadline and get legal help immediately — Pennsylvania legal aid offices assist with debt-collection defense.
+- **DON'T assume a judgment means you must pay from protected funds.** Pennsylvania law shields categories of income and property from ordinary consumer judgment execution **[VERIFY]** current exemption law (e.g., 42 Pa.C.S. §§ 8123, 8127) with an attorney before any execution occurs.
+- **DON'T rely on verbal assurances that "it won't be reported."** Get credit-reporting holdouts in writing, signed and dated.
+- **DON'T pay a collector "to make the credit report go away"** before confirming in writing that payment will result in tradeline deletion (not merely "paid in full" notation), and before confirming the amount in a written settlement agreement.
+- **DON'T engage with "debt relief" or "credit repair" companies that cold-contact you.** For-profit debt settlement of medical bills often converts a protected dispute into an unprotected one; legitimate help is available free from PA legal aid and nonprofit credit counseling.
+
+---
+
+# 7. ESCALATION & REGULATORS
+
+## DO
+
+- **DO exhaust internal channels first, in order:** (1) provider billing dispute → (2) insurer internal appeal → (3) formal external review / regulator complaints. Skipping steps gives agencies an easy reason to bounce your complaint.
+- **DO file the *right* regulator complaint for your plan type:**
+  - **Fully insured plan** (state-regulated) → Pennsylvania Insurance Department (PID), including an external-review request under Act 146 of 2022 (SB 225, signed November 3, 2022).
+  - **Self-funded ERISA plan** (employer pays claims directly) → the federal No Surprises Act complaint channel at cms.gov/nosurprises.
+  - **Either way**, a complaint to the PA Attorney General's Bureau of Consumer Protection addresses the collection conduct itself.
+  - **Either way**, CFPB complaints reach the credit-reporting side.
+- **DO ask your employer or plan administrator, in writing, whether the plan is fully insured or self-funded.** Get the answer in writing — it determines your forum.
+- **DO use the Act 146 screening shortcut:** if the insurer's denial notice describes your right to request PID review of No Surprises Act compliance, the plan is likely fully insured. But treat this as *screening evidence only* — confirm the funding type directly, because an omission proves nothing.
+- **DO raise procedural violations in your complaint**, not just the merits:
+  - Did the denial letter include the Act 146 external-review-rights notice? If not, that omission is itself a violation.
+  - Was the federal notice-and-consent waiver timely, complete, and accurately labeled?
+  - Did the nonprofit hospital begin collections before day 120, or fail to process your FAP application?
+- **DO attach the evidence file** — highlighted bills, EOBs, certified-mail receipts, your dispute letters, the rejection letters, your interaction log — organized with a one-page index. Agencies act faster on complete files.
+- **DO file complaints in parallel where jurisdiction overlaps.** PID + PA AG + CMS/CFPB simultaneously is standard practice and multiplies institutional pressure.
+- **DO track every complaint number and assigned analyst**, and follow up in writing when deadlines lapse without response.
+- **DO state the specific relief you want** in every filing: re-adjudication at in-network levels, rescission of the balance bill, tradeline deletion, referral of the payer–provider dispute to federal IDR. Vague complaints get vague outcomes.
+- **DO report suspected scams** — fake collectors, fake "hospital resolution departments," phishing texts about outstanding balances — to the PA AG and FTC.
+
+## DON'T
+
+- **DON'T write to regulators as if you're writing an angry email.** They are building a potential enforcement record. Facts, dates, citations, exhibits.
+- **DON'T misstate facts or exaggerate amounts** in any complaint — one discrepancy can discredit an otherwise strong file.
+- **DON'T file complaints you don't intend to follow through on** with documents and responses; abandoned complaints achieve nothing and waste your own leverage.
+- **DON'T treat the internal appeal denial as the end.** Pennsylvania's external-review overturn rates have historically exceeded internal appeal rates substantially **[UNVERIFIED DATA — confirm current PID figures before citing]**. Escalation is where the odds flip.
+- **DON'T sign a settlement drafted by the other side** without reading every clause — particularly releases of "all claims under federal and state law," which can extinguish your UTPCPL treble-damages claim. Counter with your own, simpler terms in writing.
+- **DON'T withdraw a regulator complaint as part of a private settlement** without written confirmation that the settlement terms have actually been performed. Perform first, withdraw second.
+- **DON'T expect regulators to act as your lawyer.** They enforce against violators; they do not represent you. Their involvement is leverage, not representation.
+
+---
+
+# 8. DIGITAL FOOTPRINT & PERSONAL CONDUCT
+
+## DO
+
+- **DO keep all dispute-related correspondence on a dedicated email address or folder**, so nothing is lost in personal-mail noise.
+- **DO check the privacy settings of any platform where you discuss your situation.** If you post publicly about your dispute, expect the other side to read it.
+- **DO document any social-media contact from collectors or provider staff** (screenshots with timestamps) — contacting you through social media in ways that are visible to others raises serious debt-collection-law issues **[VERIFY]** current CFPB guidance on electronic communications.
+- **DO save every version of the provider's own billing policies posted online** (financial assistance policy, collection policy). Websites change; archived copies prove what the policy said when it mattered.
+
+## DON'T
+
+- **DON'T post details of your dispute publicly in real time** — specific amounts, account numbers, provider threats, or your litigation strategy. Posts can be quoted in negotiations and court, can waive confidentiality, and occasionally constitute defamation exposure if you allege facts you can't yet prove.
+- **DON'T name-shame individual employees** on review sites during an open dispute. Focus public commentary on institutions and documented conduct, after resolution, and keep it factual.
+- **DON'T respond to billing or collector messages on social media** — direct them in writing to your designated mailing address.
+- **DON'T sign electronic "acknowledgment" pop-ups** on patient portals or collector websites without reading them. Click-wrap agreements can contain payment-plan enrollment, arbitration clauses, or acknowledgment language that harms your dispute.
+- **DON'T record phone calls without confirming the law.** Pennsylvania generally requires the consent of all parties to record a call **[VERIFY]** current law before recording; covert recording can expose *you* to liability and taint your evidence.
+
+---
+
+# QUICK-REFERENCE: THE TEN COMMANDMENTS OF MEDICAL BILL DEFENSE
+
+1. **Never pay during an open dispute.** Not $5. Not once. (SOL restart risk.)
+2. **Everything in writing.** Phone calls are for scheduling letters.
+3. **Certified Mail, Return Receipt, always.** Unproven delivery = unproven dispute.
+4. **Get it itemized.** Lump-sum bills hide the errors that win cases.
+5. **Know your clocks:** 120-day ECA ban, 240-day FAP window, 4-year SOL.
+6. **Identify the two types early:** plan (fully insured → PID / self-funded → CMS) and provider (nonprofit hospital → 501(r) leverage).
+7. **No credit cards, no financing loans, no "relief" companies** for a disputed medical bill.
+8. **Micro-payments, payment plans, and signed "resolutions" are traps** until reviewed by someone on your side.
+9. **Regulate in parallel, document relentlessly, and demand specific relief.**
+10. **Answer every lawsuit.** A default judgment is the only truly unrecoverable loss.
+
+---
+
+## Golden Rules Cross-Reference to the Main Framework
+
+| Rule in This Guide | Deep-Dive Section in the Main Framework |
+|---|---|
+| No Surprises Act basics and consent-waiver defects | § 1 (Federal NSA) |
+| Nonprofit hospital FAP / AGB / ECA leverage | § 2 (IRS § 501(r)) |
+| FCEUA, UTPCPL, and Act 146 rights | § 3 (PA Law) |
+| Statute of limitations and post-judgment exposure | § 4 (SOL & Post-Judgment) |
+| Why escalation beats persistence alone | § 5 (Adjudication Metrics) |
+| Keeping coverage appeals and balance disputes separate | § 6 (Two-Track Architecture) |
+| Step-by-step sequencing | § 7 (Practical Steps) |
+| Ready-to-send letters | §§ 8–13 (Templates) |
+| Regulator contact sheet | § 14 (Regulatory Action Checklist) |
+
+---
+
+*Version: Rev. 4.1 companion · Last updated: 05 Nov 2026 · Not legal advice · [VERIFY] items must be checked against current primary sources before reliance*
