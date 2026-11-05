@@ -1,0 +1,654 @@
+STATUTORY COMPLIANCE & DISPUTE AUDIT CHECKLIST
+--------------------------------------------------------------------------------
+[ ] NSA Facility & Provider Check: Verified emergency vs. non-emergency status (45 C.F.R. § 149.110 / § 149.120)
+[ ] Waiver Validity Audit: Confirmed non-applicability of 72-hour notice & consent for ancillary providers (45 C.F.R. § 149.420)
+[ ] IDR Track Status: Requested Open Negotiation / IDR initiation status (45 C.F.R. § 149.510)
+[ ] FCEUA Collection Hold: Issued written cease & desist demand under PA law (73 P.S. § 2270.4)
+[ ] 501(r) ECA Hold: Confirmed pause on Extraordinary Collection Actions for non-profit hospitals (26 U.S.C. § 501(r)(6))
+[ ] Disputed Tradeline Reporting: Verified debt is flagged as "DISPUTED" on credit files (15 U.S.C. § 1681s-2(b); 73 P.S. § 2270.4(b)(5))
+[ ] HIPAA Compliance: Ensured collection agency disclosure strictly adheres to minimum necessary rules (45 C.F.R. § 164.502)
+[ ] Statute of Limitations Audit: Verified claim age against PA 4-year contract limit (42 Pa.C.S. § 5525(a))
+--------------------------------------------------------------------------------
+
+---
+
+## 4. Statute of Limitations and Post-Judgment Rules in Pennsylvania
+
+### Statute of Limitations
+
+The temporal window for the legal recovery of medical debts is governed primarily by the statute of limitations for written contracts. Pursuant to **42 Pa.C.S. § 5525(a)(8)**, the statutory period for commencing an action on a written contract is **four years**. Because most medical billing is predicated on a signed "Assignment of Benefits" or "Financial Responsibility" agreement executed at the point of intake, this four-year window typically dictates the timeframe in which a provider may initiate a civil lawsuit to secure a judgment.
+
+**Important:** While the No Surprises Act prohibits the initial balance bill, the statute of limitations continues to run on the underlying debt unless tolled. Any attempt to sue for a balance that is federally prohibited under the NSA would likely face dismissal — **[VERIFY]** — this is an inference, not a verified holding.
+
+| Claim | Period | Authority | Notes |
+|---|---|---|---|
+| Medical debt (written contract) | 4 years from breach or default | 42 Pa.C.S. § 5525(a)(8) | Runs from default, generally the date payment was due on the unpaid statement. **[VERIFY]** current numbering. |
+| Restart by partial payment or written acknowledgment | Clock restarts | 42 Pa.C.S. § 5533(b) | **[VERIFY]** that this is the correct provision and its exact effect in your fact pattern. Secondary sources assert a payment plan or nominal payment resets the clock — treat as probable, not settled. |
+| FDCPA claim against a third-party collector | 1 year | 15 U.S.C. § 1692k(d) | Federal claims only. |
+| UTPCPL private action | Generally 6 years | 42 Pa.C.S. § 5527(b) | Catch-all period; supported by analogy to other statutory claims. **"Generally applied"** — **[VERIFY]** current case law. |
+
+**Practical rule:** Do not make a partial payment, sign a payment plan, or acknowledge the debt in writing while a dispute is open — these actions can restart the limitations clock and eliminate a complete time-bar defense. Seek advice first.
+
+### Post-Judgment Asset Rules
+
+Once a judgment is entered, a judgment creditor may seek to satisfy the debt through a writ of execution, allowing for the attachment of the debtor's property or the garnishment of wages. Pennsylvania law provides statutory exemptions designed to prevent total indigence of the debtor. **[VERIFY]** each item with current statutes and the Pennsylvania Rules of Civil Procedure.
+
+| Exemption Type | Protection | Notes |
+|---|---|---|
+| **Homestead** | Protection for a primary residence | Limits the ability of medical creditors to force the sale of a home to satisfy a judgment. **[VERIFY]** current monetary cap and filing requirements. |
+| **Wage garnishment** | Pennsylvania generally bars wage garnishment for ordinary consumer judgments | 42 Pa.C.S. § 8127. Exceptions exist for child support and some tax debts. **[VERIFY]** current thresholds. |
+| **Personal property** | Household goods, clothing, tools of trade | Generally shielded from seizure by sheriff's sale. **[VERIFY]** current amounts. |
+| **Bank accounts** | Statutory exemptions under 42 Pa.C.S. § 8123 | Certain funds (e.g., Social Security, pension) may be protected. Check how exemptions apply to recent deposits. **[VERIFY]**. |
+| **Real estate — tenants by the entireties** | Home owned jointly by spouses | Generally cannot be reached for a debt owed by only one spouse. **[VERIFY]** current practice. |
+| **Judgment lien duration** | Generally **five years**, must be revived | The judgment itself can remain enforceable longer. **[VERIFY]**; an earlier version of this framework stated ten years, which is not reliable. |
+
+**Interaction with FCEUA after judgment:** collection conduct after judgment remains governed by 73 P.S. § 2270.4. If a creditor uses deceptive practices to induce voluntary payment on a judgment known to be based on an unlawful NSA balance bill, the consumer may maintain a UTPCPL cause of action, potentially offsetting the judgment amount with statutory treble damages.
+
+---
+---
+
+# PART II — STRATEGY
+
+---
+
+## 5. Adjudication Metrics and Strategic Context
+
+The following metrics, drawn from a secondary compilation of state and federal data, illustrate why escalation through formal channels works. **[UNVERIFIED DATA]** — confirm current figures from PID and CMS publications before quoting them in any filing.
+
+| Metric | Value | Strategic significance |
+|---|---|---|
+| Annual commercial claim volume (PA) | ~20.7 million | Base volume in state-regulated plans. |
+| Initial claim denial rate (commercial/marketplace) | ~14.8% | Roughly 3 million adverse determinations annually. |
+| Consumer internal appeal rate | < 1% | Overwhelming procedural drop-off — persistence itself is an advantage. |
+| Internal appeal overturn rate (PA) | ~35.7% | Internal appeals succeed about a third of the time. |
+| PID Independent External Review overturn rate | ~50.1%–50.6% | Independent review reverses a majority of appealed denials — the strongest statistical argument for exhausting into external review. |
+| Federal IDR submissions (nationwide) | > 5.1 million | Large-scale payer-provider friction exists; patients should not be drawn into it. |
+| Federal complaint monetary relief | > $4.18 million | Federal enforcement has produced direct consumer restitution. |
+
+**Takeaway:** internal insurer appeals are a necessary procedural gateway but should not be treated as the final word. The PID external review program's substantially higher reversal rate makes escalation under Act 146 of 2022 a strategically superior pathway for fully insured plans.
+
+---
+
+[ Unlawful Out-of-Network Balance Bill Received ]
+                                  │
+    ┌─────────────────────────────┴─────────────────────────────┐
+    ▼                                                           ▼
+[ TRACK 1: INSURER ADJUDICATION ] [ TRACK 2: PROVIDER RESCISSION ] │ │ Internal formal appeal to Written Notice of Statutory Dispute the health plan citing 45 C.F.R. Part 149 & FCEUA │ │ ┌─────┴─────┐ ▼ ▼ ▼ Demand administrative hold [Approved] [Denied] & account rescission (OON rate (Keep in- │ paid) network) ▼ │ Collection paused; provider ▼ rerouted to Federal IDR Escalate to PID (45 C.F.R. § 149.510) External Review (~50% reversal)
+
+
+### Track 1: Insurer adjudication and regulatory external review
+
+Applies to the coverage contract between the policyholder and the plan. If the plan denies coverage or processes an OON claim without applying NSA in-network cost-sharing protections: file a formal internal appeal; if denied, escalate immediately to the **PID Independent External Review program** (fully insured plans) or the **federal appeal/IDR channel** (self-funded plans).
+
+### Track 2: Provider and collection rescission
+
+Applies to the billing entity, hospital, or third-party collector. Issue a formal **Notice of Statutory Dispute and Demand for Rescission**, which accomplishes four objectives:
+
+1. **Assertion of federal non-compliance** — documents the absence of a valid, timely notice and consent waiver under 45 C.F.R. § 149.420.
+2. **Mandatory administrative hold** — invokes FCEUA (and FDCPA if a third-party collector) to freeze collection and credit reporting during the dispute.
+3. **Statutory time-bar enforcement** — asserts 42 Pa.C.S. § 5525 protections and refuses any partial payment or payment plan that would reset the clock.
+4. **IDR redirection** — instructs the billing department to pursue reimbursement from the plan through the Federal IDR process, not from the patient.
+
+### Escalation if both tracks stall
+
+Simultaneous complaints to the PID Consumer Services Bureau, the PA Attorney General's Bureau of Consumer Protection, and the CMS No Surprises channel trigger agency inquiries that frequently result in balance adjustments and compliance scrutiny. If a nonprofit hospital is involved, add the FAP demand (Section 9) and, for the credit-reporting side, the bureau dispute → Method of Verification request → CFPB complaint sequence.
+
+---
+
+## 7. Practical Steps for Consumers
+
+1. **Request an itemized bill and EOB.** Compare the billed amount to the in-network cost-sharing amount.
+2. **Determine the plan type.** Ask the employer or plan administrator whether the plan is fully insured or self-funded (ERISA). **Screening shortcut:** check the insurer's denial notice or EOB for Act 146 external-review language (a right to request PID review of NSA compliance). Its presence indicates a fully insured, state-regulated plan; a notice describing only federal appeal/IDR rights suggests a self-funded plan. **This is screening evidence only, not a determination** — a fully insured plan could omit the state disclosure, so confirm the funding type in writing with the plan administrator.
+3. **Determine the provider type.** Nonprofit hospital (501(r) applies — add the FAP track), physician group, or for-profit facility (NSA and state law only).
+4. **Check the service category.** Emergency care, ancillary service at an in-network facility, or scheduled non-emergency service — this determines which Option (A/B/C) in the dispute letter applies.
+5. **Send the written dispute** (Section 8) by certified mail, return receipt requested. Keep copies of everything.
+6. **If a nonprofit hospital is involved, send the FAP demand** (Section 9) immediately and audit the 120-day ECA window for premature collection activity.
+7. **File the regulator complaint** (Section 10 for fully insured; Section 11 for self-funded). For fully insured plans, assert both the ordinary consumer complaint **and** the Act 146 external-review request; raise any omission of the Act 146 disclosure.
+8. **Avoid partial payments and written acknowledgments** of the debt while any dispute is open.
+9. **Maintain a tracking log** — record every mailing (certified number, date sent, delivery date), phone call (representative name/ID), response deadline, and follow-up date. Highlight rows within 3 days of deadline lapse.
+10. **Consult counsel** before any lawsuit, particularly if a collector or creditor has filed suit or threatened one.
+
+---
+---
+
+# PART III — TEMPLATES
+
+---
+
+## 8. Dispute Letter to Billing Facility
+
+```text
+[Your Full Name]
+[Street Address]
+[City, PA ZIP]
+[Phone] | [Email]
+
+[Date]
+
+VIA CERTIFIED MAIL, RETURN RECEIPT REQUESTED
+Tracking #: [Number]
+
+[Provider Name]
+Attn: Billing Department
+[Provider Street Address]
+[City, State ZIP]
+
+Re: Dispute of Balance Bill, Account # [Account Number]
+    Date(s) of Service: [Dates]
+    Amount Disputed: $[Amount]
+
+Dear Billing Manager:
+
+I am writing to dispute the balance bill referenced above. I am disputing
+this amount in writing and request that you respond in writing.
+
+1. Basis for dispute
+
+[Select the applicable statement and delete the others.]
+
+[Option A, emergency services:] The services were emergency services under
+the No Surprises Act, 42 U.S.C. § 300gg-111 and Public Health Service Act
+§§ 2799A-1 through 2799A-3, as implemented at 45 C.F.R. Part 149. Balance
+billing for emergency services is limited to in-network cost-sharing.
+
+[Option B, ancillary services at an in-network facility:] The services
+were non-emergency services by an out-of-network ancillary provider (for
+example, anesthesiology, radiology, or pathology) at an in-network
+facility. Under 45 C.F.R. Part 149, such providers may not balance bill
+beyond in-network cost-sharing. A consent waiver does not apply to
+ancillary services.
+
+[Option C, other non-emergency services:] The services were non-emergency
+services by an out-of-network provider at an in-network facility. I did
+not sign a valid written notice and consent waiver provided at least 72
+hours before the service. [Describe the situation.]
+
+I am not responsible for any amount above my in-network cost-sharing
+obligation. Under the framework established by 45 C.F.R. Part 149, the
+health plan and provider are responsible for resolving payment disputes
+through open negotiation and, if needed, Independent Dispute Resolution.
+
+2. Pennsylvania law
+
+To the extent you are a creditor collecting this balance, the Fair Credit
+Extension Uniformity Act, 73 P.S. § 2270.1 et seq., applies to your
+collection conduct. Collecting or attempting to collect an amount not owed
+may violate 73 P.S. § 2270.4 **[VERIFY subsection pin cite]**. A violation
+of that Act may also violate the Unfair Trade Practices and Consumer
+Protection Law, 73 P.S. § 201-1 et seq.
+
+3. Requests
+
+Please:
+
+a. Stop all collection activity on this account, including calls,
+   statements, and referrals to any collection agency, while this dispute
+   is pending.
+b. Correct the account to reflect only my in-network cost-sharing
+   obligation, or provide a written explanation of the basis for the
+   balance.
+c. Confirm in writing that the account will not be reported to any credit
+   reporting agency as past due or in collection while this dispute is
+   pending.
+d. [If applicable:] Provide your Financial Assistance Policy, a
+   plain-language summary, and a FAP application.
+
+Please respond in writing within 30 days. This is my request for a
+response. It is not a legal deadline, but I will consider the account
+disputed until I receive a written answer.
+
+I will file complaints with the appropriate regulator if this matter is
+not resolved:
+- Pennsylvania Insurance Department, Consumer Services Bureau:
+  1-877-881-6388 (fully insured plans)
+- CMS / federal No Surprises Act channel: confirm the current number and
+  complaint portal at cms.gov/nosurprises before sending
+  (sources conflict: 1-800-985-3059 vs. 1-800-MEDICARE, 1-800-633-4227)
+
+Enclosures:
+- Copy of balance bill (highlighted)
+- Explanation of Benefits
+- Documentation of service dates and provider type
+- [If applicable:] Written notice and consent form, if any
+
+Sincerely,
+
+[Signature]
+[Printed Name]
+
+9. FAP Demand Letter (Nonprofit Hospitals)
+[Your Full Name]
+[Street Address]
+[City, PA ZIP]
+[Phone] | [Email]
+
+[Date]
+
+VIA CERTIFIED MAIL, RETURN RECEIPT REQUESTED
+Tracking #: [Number]
+
+[Hospital/Healthcare Facility Name]
+Attn: Patient Financial Services / Financial Assistance Office
+[Provider Street Address]
+[City, State ZIP]
+
+Re: REQUEST FOR FINANCIAL ASSISTANCE POLICY & APPLICATION (IRS § 501(r))
+    Account # [Account Number]
+    Date(s) of Service: [Dates]
+
+Dear Patient Financial Services:
+
+I am writing to request a copy of your Financial Assistance Policy (FAP)
+and FAP application form pursuant to IRS Section 501(r), applicable to
+tax-exempt hospital organizations under 26 U.S.C. § 501(r).
+
+Background:
+I received a billing statement from your organization on or about [Date]
+for services rendered on [Date(s) of Service]. The account balance listed
+is $[Amount].
+
+Legal requirements under 26 U.S.C. § 501(r):
+
+1. Your facility is prohibited from initiating any Extraordinary
+   Collection Actions (ECAs) — including credit reporting, liens,
+   lawsuits, wage garnishment, or bank levies — for at least 120 days
+   following the date of the first post-discharge billing statement.
+2. Your facility must accept and process FAP applications for at least
+   240 days from the date of the initial post-discharge billing statement.
+3. If I submit a complete FAP application within the 240-day window and am
+   determined eligible, you must reverse any ECAs, refund excess payments,
+   and instruct credit reporting agencies to delete adverse tradelines.
+
+Requests — please provide within 10 business days:
+
+a. Your complete Financial Assistance Policy (FAP) document.
+b. A plain-language summary of FAP eligibility criteria.
+c. A FAP application form.
+d. Written confirmation that no ECAs have been initiated on this account
+   and that none will be initiated while this request is pending.
+e. The calculation methodology for Amounts Generally Billed (AGB) under
+   26 U.S.C. § 501(r)(5).
+f. The dates of the first post-discharge billing statement and any
+   subsequent billing statements on this account.
+
+If this facility is not a 501(c)(3) tax-exempt hospital organization,
+please provide written confirmation of your organizational status.
+
+I reserve all rights under federal and Pennsylvania law, including the No
+Surprises Act (45 C.F.R. Part 149) and the Fair Credit Extension Uniformity
+Act (73 P.S. § 2270.1 et seq.).
+
+Sincerely,
+
+[Signature — sign in ink]
+[Printed Name]
+
+Enclosures:
+- Copy of billing statement (highlighted)
+- [If applicable:] Copy of dispute letter referencing No Surprises Act
+  violations
+
+10. PID Complaint Narrative (Fully Insured Plans, with Act 146 External-Review Hook)
+PENNSYLVANIA INSURANCE DEPARTMENT
+CONSUMER SERVICES BUREAU — EXTERNAL REVIEW REQUEST
+
+RE: External Review Request Under Act 146 of 2022 (SB 225)
+Insured Name: [Your Full Name]
+Insurance Carrier: [Carrier Name]
+Provider/Facility Name: [Provider Name]
+Account/Claim Number: [Account Number]
+Date(s) of Service: [Dates]
+Amount Disputed: $[Amount]
+Internal Appeal Decision Date: [Date Denial Received]
+PID Consumer Services Contact: 1-877-881-6388
+
+SUMMARY OF COMPLAINT
+
+On [Date], I received a balance bill from [Provider Name] in the amount of
+$[Amount] for services rendered on [Date(s) of Service]. This bill was
+issued after my health insurance carrier, [Carrier Name], processed the
+claim at an out-of-network rate rather than applying in-network
+cost-sharing protections under the No Surprises Act (Public Health Service
+Act §§ 2799A-1 through 2799A-3, 45 C.F.R. Part 149).
+
+The services were [emergency care / an ancillary service by an
+out-of-network anesthesiologist, radiologist, or pathologist at an
+in-network facility / a non-emergency service without a valid 72-hour
+notice and consent].
+
+I submitted an internal appeal to [Carrier Name] on [Date]. On [Date], I
+received a denial letter maintaining the out-of-network cost-sharing
+amount. This denial letter [includes / DOES NOT include] the statutory
+notice required under Act 146 of 2022 informing me of my right to request
+external review of whether the plan complied with the No Surprises Act's
+surprise-billing and cost-sharing protections.
+
+[IF NOTICE WAS OMITTED — ADD:] The denial letter omitted the required Act
+146 disclosure regarding external review rights. This omission itself
+constitutes a compliance failure under Act 146 of 2022.
+
+[IF NOTICE WAS INCLUDED — ADD:] Pursuant to Act 146 of 2022, I hereby
+request that the Pennsylvania Insurance Department's Independent External
+Review program determine whether [Carrier Name] complied with the No
+Surprises Act's surprise-billing and cost-sharing protections in
+processing this claim.
+
+FACTUAL BACKGROUND
+
+1. Service type: [Emergency / Non-emergency ancillary / Non-emergency other]
+2. Facility network status: [In-network / Out-of-network]
+3. Provider network status: [In-network / Out-of-network — specify specialty if ancillary]
+4. Consent waiver provided?: [Yes / No — if yes, was it given at least 72 hours before service?]
+5. Amount billed: $[Amount] (out-of-network balance billing)
+6. Correct in-network obligation: $[Amount, if known from EOB]
+
+STATUTORY GROUNDS
+
+A. Federal No Surprises Act (45 C.F.R. Part 149)
+[Select applicable:]
+□ Emergency services at an out-of-network facility or by an
+  out-of-network provider — balance billing prohibited beyond
+  in-network cost-sharing.
+□ Non-emergency ancillary services (anesthesiology, radiology, pathology,
+  neonatology, assistant surgery) at an in-network facility — balance
+  billing prohibited regardless of any consent waiver.
+□ Non-emergency service without a valid 72-hour advance notice and
+  consent waiver — any waiver is void and the balance bill invalid.
+
+Under 45 C.F.R. § 149.510, payment disputes between the provider and the
+plan must be resolved through open negotiation and, if needed, Federal
+IDR. My statutory obligation is capped at in-network cost-sharing.
+
+B. Act 146 of 2022 (Pennsylvania)
+Act 146 of 2022 (SB 225, signed November 3, 2022) amends the Insurance
+Company Law of 1921 and provides covered persons the right to request
+external review of insurer compliance with the No Surprises Act's
+surprise-billing and cost-sharing protections, routed to the Pennsylvania
+Insurance Department. [If applicable: the carrier's denial letter failed
+to include the required notice of this right.]
+
+C. Fair Credit Extension Uniformity Act (FCEUA), 73 P.S. § 2270.1 et seq.
+The provider/collector is attempting to collect an amount that may not be
+owed under federal and state law. Collection of disputed amounts without
+proper verification while the dispute is unadjudicated may constitute an
+unfair or deceptive practice under 73 P.S. § 2270.4.
+
+REQUESTED RELIEF
+
+1. An Independent External Review determination on whether [Carrier Name]
+   properly applied No Surprises Act in-network cost-sharing protections
+   to this claim.
+2. A directive to [Carrier Name] to re-adjudicate the claim at in-network
+   cost-sharing levels.
+3. Direction to [Provider Name] to rescind the balance bill and refer any
+   payment dispute to the Federal IDR process.
+4. Correction of any credit reporting related to this disputed amount
+   while the external review is pending.
+5. Any additional relief the Department deems appropriate.
+
+ENCLOSURES
+
+- Copy of balance bill (highlighted)
+- Copy of Explanation of Benefits (EOB)
+- Copy of internal appeal decision letter
+- Copy of initial dispute letter to provider (with certified mail tracking)
+- Copy of federal No Surprises Act complaint, if filed with CMS
+
+CERTIFICATION
+
+I certify that the information provided above is true and accurate to the
+best of my knowledge.
+
+Signature: ______________________________     Date: _______________
+
+11. CMS Complaint Narrative (Self-Funded ERISA Plans)
+CMS NO SURPRISES ACT — CONSUMER COMPLAINT NARRATIVE
+
+Submit via the official portal at cms.gov/nosurprises.
+[Confirm the current federal contact number at cms.gov/nosurprises before
+using any phone number. Sources conflict: 1-800-985-3059 appears in some
+consumer materials; 1-800-MEDICARE, 1-800-633-4227, appears in others.]
+
+COMPLAINANT INFORMATION
+Full Name: [Your Full Name]
+Member/Policy Number: [If known]
+Plan Name: [Employer/Group Plan Name]
+Plan Administrator: [If known]
+Insurance Carrier: [Carrier Name]
+Plan Type: [Confirm: Self-Funded ERISA]
+
+PROVIDER / FACILITY INFORMATION
+Provider/Facility Name: [Name]
+Account/Invoice Number: [Number]
+Date(s) of Service: [Dates]
+Total Amount Disputed: $[Amount]
+Nature of Service: [Emergency / Ancillary / Other — specify]
+
+CLAIM HISTORY
+1. Claim submission date: [Date]
+2. Initial processing result: [Out-of-network denial / partial payment]
+3. EOB receipt date: [Date]
+4. Balance bill receipt date: [Date]
+5. Internal appeal filed: [Yes / No] — decision date: [Date]
+
+VIOLATION ALLEGATIONS — 45 C.F.R. PART 149
+
+[SELECT AND DESCRIBE APPLICABLE VIOLATIONS:]
+
+□ EMERGENCY SERVICES: Services were emergency care at an out-of-network
+  facility or by an out-of-network provider. Balance billing is
+  prohibited; patient liability is limited to in-network cost-sharing
+  calculated using the Qualifying Payment Amount (QPA).
+
+□ ANCILLARY SERVICES AT IN-NETWORK FACILITY: Services were provided by an
+  out-of-network ancillary specialist (anesthesiology, radiology,
+  pathology, neonatology, or assistant surgeon) at an in-network
+  facility. Balance billing is prohibited; consent waivers do not apply
+  to these services.
+
+□ NON-EMERGENCY SERVICE WITHOUT VALID CONSENT: Services were non-emergency
+  services by an out-of-network provider at an in-network facility, and I
+  did not receive a valid notice and consent form at least 72 hours
+  before service (or at the earliest possible time for short-notice
+  scheduling). Any signed form is void due to insufficient advance
+  notice, inadequate itemization, or failure to state that signing is
+  optional.
+
+□ AIR AMBULANCE: Air ambulance services were provided, protected under
+  45 C.F.R. § 149.230.
+
+STATUTORY BASIS
+
+1. Public Health Service Act §§ 2799A-1 through 2799A-3
+   (42 U.S.C. § 300gg-111 et seq.)
+2. 45 C.F.R. Part 149
+3. 45 C.F.R. § 149.510 (patient decoupling from payer-provider disputes)
+4. 45 C.F.R. § 149.610 (complaint and enforcement procedures)
+
+REMEDIES SOUGHT
+
+1. Investigation of the provider/facility for balance billing violations.
+2. Investigation of the health plan for failure to apply in-network
+   cost-sharing protections.
+3. Rescission of the balance bill and limitation of patient liability to
+   in-network cost-sharing.
+4. Referral of the payer-provider payment dispute to the Federal IDR
+   process.
+5. Restitution of any amounts collected in excess of in-network
+   cost-sharing.
+6. Corrective action to prevent recurrence.
+
+DOCUMENTARY EVIDENCE ATTACHED
+
+- Balance bill from provider (highlighted)
+- Explanation of Benefits (EOB)
+- Internal appeal and decision, if applicable
+- Consumer dispute letter to provider (with certified mail tracking)
+- Any notice and consent forms received
+- Communication logs with carrier and provider
+
+PREVIOUS COMPLAINTS FILED
+- Pennsylvania Insurance Department: [Yes / No — PID case number]
+- Provider internal grievance: [Yes / No — date and response]
+- Insurer internal appeal: [Yes / No — date and decision]
+
+CERTIFICATION
+
+I certify that the information provided is true and accurate to the best
+of my knowledge.
+
+Signature: ______________________________     Date: _______________
+
+12. Provider Escalation & Administrative Hold Demand (Post-Rejection)
+[Your Full Name]
+[Street Address]
+[City, PA ZIP]
+[Phone] | [Email]
+
+[Date]
+
+VIA CERTIFIED MAIL, RETURN RECEIPT REQUESTED
+Tracking #: [Number]
+
+[Provider / Health System Name]
+Attn: Billing Compliance & Legal Department
+[Addr
+### Track 1: Insurer adjudication and regulatory external review
+
+Applies to the coverage contract between the policyholder and the plan. If the plan denies coverage or processes an OON claim without applying NSA in-network cost-sharing protections: file a formal internal appeal; if denied, escalate immediately to the **PID Independent External Review program** (fully insured plans) or the **federal appeal/IDR channel** (self-funded plans).
+
+### Track 2: Provider and collection rescission
+
+Applies to the billing entity, hospital, or third-party collector. Issue a formal **Notice of Statutory Dispute and Demand for Rescission**, which accomplishes four objectives:
+
+1. **Assertion of federal non-compliance** — documents the absence of a valid, timely notice and consent waiver under 45 C.F.R. § 149.420.
+2. **Mandatory administrative hold** — invokes FCEUA (and FDCPA if a third-party collector) to freeze collection and credit reporting during the dispute.
+3. **Statutory time-bar enforcement** — asserts 42 Pa.C.S. § 5525 protections and refuses any partial payment or payment plan that would reset the clock.
+4. **IDR redirection** — instructs the billing department to pursue reimbursement from the plan through the Federal IDR process, not from the patient.
+
+### Escalation if both tracks stall
+
+Simultaneous complaints to the PID Consumer Services Bureau, the PA Attorney General's Bureau of Consumer Protection, and the CMS No Surprises channel trigger agency inquiries that frequently result in balance adjustments and compliance scrutiny. If a nonprofit hospital is involved, add the FAP demand (Section 9) and, for the credit-reporting side, the bureau dispute → Method of Verification request → CFPB complaint sequence.
+
+---
+
+## 7. Practical Steps for Consumers
+
+1. **Request an itemized bill and EOB.** Compare the billed amount to the in-network cost-sharing amount.
+2. **Determine the plan type.** Ask the employer or plan administrator whether the plan is fully insured or self-funded (ERISA). **Screening shortcut:** check the insurer's denial notice or EOB for Act 146 external-review language (a right to request PID review of NSA compliance). Its presence indicates a fully insured, state-regulated plan; a notice describing only federal appeal/IDR rights suggests a self-funded plan. **This is screening evidence only, not a determination** — a fully insured plan could omit the state disclosure, so confirm the funding type in writing with the plan administrator.
+3. **Determine the provider type.** Nonprofit hospital (501(r) applies — add the FAP track), physician group, or for-profit facility (NSA and state law only).
+4. **Check the service category.** Emergency care, ancillary service at an in-network facility, or scheduled non-emergency service — this determines which Option (A/B/C) in the dispute letter applies.
+5. **Send the written dispute** (Section 8) by certified mail, return receipt requested. Keep copies of everything.
+6. **If a nonprofit hospital is involved, send the FAP demand** (Section 9) immediately and audit the 120-day ECA window for premature collection activity.
+7. **File the regulator complaint** (Section 10 for fully insured; Section 11 for self-funded). For fully insured plans, assert both the ordinary consumer complaint **and** the Act 146 external-review request; raise any omission of the Act 146 disclosure.
+8. **Avoid partial payments and written acknowledgments** of the debt while any dispute is open.
+9. **Maintain a tracking log** — record every mailing (certified number, date sent, delivery date), phone call (representative name/ID), response deadline, and follow-up date. Highlight rows within 3 days of deadline lapse.
+10. **Consult counsel** before any lawsuit, particularly if a collector or creditor has filed suit or threatened one.
+
+---
+---
+
+# PART III — TEMPLATES
+
+---
+
+## 8. Dispute Letter to Billing Facility
+
+```text
+[Your Full Name]
+[Street Address]
+[City, PA ZIP]
+[Phone] | [Email]
+
+[Date]
+
+VIA CERTIFIED MAIL, RETURN RECEIPT REQUESTED
+Tracking #: [Number]
+
+[Provider Name]
+Attn: Billing Department
+[Provider Street Address]
+[City, State ZIP]
+
+Re: Dispute of Balance Bill, Account # [Account Number]
+    Date(s) of Service: [Dates]
+    Amount Disputed: $[Amount]
+
+Dear Billing Manager:
+
+I am writing to dispute the balance bill referenced above. I am disputing
+this amount in writing and request that you respond in writing.
+
+1. Basis for dispute
+
+[Select the applicable statement and delete the others.]
+
+[Option A, emergency services:] The services were emergency services under
+the No Surprises Act, 42 U.S.C. § 300gg-111 and Public Health Service Act
+§§ 2799A-1 through 2799A-3, as implemented at 45 C.F.R. Part 149. Balance
+billing for emergency services is limited to in-network cost-sharing.
+
+[Option B, ancillary services at an in-network facility:] The services
+were non-emergency services by an out-of-network ancillary provider (for
+example, anesthesiology, radiology, or pathology) at an in-network
+facility. Under 45 C.F.R. Part 149, such providers may not balance bill
+beyond in-network cost-sharing. A consent waiver does not apply to
+ancillary services.
+
+[Option C, other non-emergency services:] The services were non-emergency
+services by an out-of-network provider at an in-network facility. I did
+not sign a valid written notice and consent waiver provided at least 72
+hours before the service. [Describe the situation.]
+
+I am not responsible for any amount above my in-network cost-sharing
+obligation. Under the framework established by 45 C.F.R. Part 149, the
+health plan and provider are responsible for resolving payment disputes
+through open negotiation and, if needed, Independent Dispute Resolution.
+
+2. Pennsylvania law
+
+To the extent you are a creditor collecting this balance, the Fair Credit
+Extension Uniformity Act, 73 P.S. § 2270.1 et seq., applies to your
+collection conduct. Collecting or attempting to collect an amount not owed
+may violate 73 P.S. § 2270.4 **[VERIFY subsection pin cite]**. A violation
+of that Act may also violate the Unfair Trade Practices and Consumer
+Protection Law, 73 P.S. § 201-1 et seq.
+
+3. Requests
+
+Please:
+
+a. Stop all collection activity on this account, including calls,
+   statements, and referrals to any collection agency, while this dispute
+   is pending.
+b. Correct the account to reflect only my in-network cost-sharing
+   obligation, or provide a written explanation of the basis for the
+   balance.
+c. Confirm in writing that the account will not be reported to any credit
+   reporting agency as past due or in collection while this dispute is
+   pending.
+d. [If applicable:] Provide your Financial Assistance Policy, a
+   plain-language summary, and a FAP application.
+
+Please respond in writing within 30 days. This is my request for a
+response. It is not a legal deadline, but I will consider the account
+disputed until I receive a written answer.
+
+I will file complaints with the appropriate regulator if this matter is
+not resolved:
+- Pennsylvania Insurance Department, Consumer Services Bureau:
+  1-877-881-6388 (fully insured plans)
+- CMS / federal No Surprises Act channel: confirm the current number and
+  complaint portal at cms.gov/nosurprises before sending
+  (sources conflict: 1-800-985-3059 vs. 1-800-MEDICARE, 1-800-633-4227)
+
+Enclosures:
+- Copy of balance bill (highlighted)
+- Explanation of Benefits
+- Documentation of service dates and provider type
+- [If applicable:] Written notice and consent form, if any
+
+Sincerely,
+
+[Signature]
+[Printed Name]
