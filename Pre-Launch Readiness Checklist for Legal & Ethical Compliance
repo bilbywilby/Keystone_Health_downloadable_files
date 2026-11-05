@@ -1,0 +1,37 @@
+🚀 Pre-Launch Readiness Checklist
+Legal & Ethical Compliance
+[ ] DISCLAIMER.md v2.0 in place with all warnings
+[ ] LEGAL_RESOURCES.md attorney referral directory published
+[ ] METRICS.md transparency dashboard with real data
+[ ] DECISION_FLOW.md user decision tree documented
+[ ] All banned citations purged from templates
+[ ] Risk-aware language in all dispute letters
+Technical Readiness
+[ ] ship_nsa_dispute_kit.sh deployed and executable
+[ ] All 18 required files present
+[ ] Citation validation passes (step 2)
+[ ] CSV schema validates (step 3)
+[ ] Python environment check passes (step 4)
+[ ] No hardcoded secrets detected (step 6)
+Documentation
+[ ] README.md updated with warning banner
+[ ] SECURITY.md policy published
+[ ] CODE_OF_CONDUCT.md in place
+[ ] CONTRIBUTING.md enhanced with workflow
+[ ] HANDOVER.md complete
+[ ] TROUBLESHOOTING.md added
+Community Infrastructure
+[ ] ISSUE_TEMPLATE/ created (3 templates)
+[ ] GitHub Actions CI/CD workflows configured
+[ ] Branch protection rules enabled
+[ ] Maintainer team at 2+ members
+[ ] Quarterly citation audit scheduled
+Final Sign-Off
+[ ] Outgoing maintainer certification signed
+[ ] New maintainer acceptance signed
+[ ] Witness acknowledgment (optional)
+[ ] CHANGELOG.md updated with v1.1.0 release notes
+Completion Date: November 5, 2026
+Primary Maintainer Signature: Keystone Forensic Navigator Team
+Secondary Maintainer Signature: Compliance Engineering Lead
+Ready for Public Release? ☐ YES ☐ NO
