@@ -1,0 +1,24 @@
+An end-to-end calculation for CPT code 99214 (Office/outpatient visit for an established patient, requiring moderate medical decision-making or 30–39 total minutes) in Pennsylvania for 2026 incorporates official federal relative values, regional economic adjustments, and commercial scaling factors.
+Step 1: Identify National RVU Components for CPT 99214
+In a non-facility (private office) setting, the standard national Relative Value Units (RVUs) for CPT 99214 are:
+Work RVU: 1.92
+Practice Expense (PE) RVU: 1.83
+Malpractice (MP) RVU: 0.10
+Total National RVU: 1.92 + 1.83 + 0.10 = \mathbf{4.06}
+Step 2: Apply Pennsylvania Geographic Practice Cost Indices (GPCIs)
+Because costs vary by region, Medicare adjusts each RVU component using localized GPCI multipliers. Pennsylvania is divided into multiple payment localities (e.g., Philadelphia/suburbs vs. rest-of-state).
+For illustration, let us apply a typical Pennsylvania urban locality index (such as Philadelphia):
+Work GPCI: ~1.000
+PE GPCI: ~1.034 (reflecting higher urban office overhead and rent)
+MP GPCI: ~0.652
+The Geographically Adjusted RVU Calculation:
+\text{Adjusted RV} = (\text{Work RVU} \times \text{Work GPCI}) + (\text{PE RVU} \times \text{PE GPCI}) + (\text{MP RVU} \times \text{MP GPCI}) \text{Adjusted RV} = (1.92 \times 1.000) + (1.83 \times 1.034) + (0.10 \times 0.652) \text{Adjusted RV} = 1.92 + 1.892 + 0.0652 = \mathbf{3.8772}
+Step 3: Multiply by the 2026 Medicare Conversion Factor
+The official non-APM Medicare Conversion Factor for 2026 is $33.4009.
+\text{Localized Medicare Baseline} = \text{Adjusted RV} \times \text{Conversion Factor} \text{Localized Medicare Baseline} = 3.8772 \times \$33.4009 = \mathbf{\$129.50}
+(Note: If using unadjusted national averages where all GPCIs equal 1.000, the national Medicare office baseline is 4.06 \times \$33.4009 = \mathbf{\$135.61}).
+Step 4: Bridge from Medicare Baseline to Commercial FMV
+In independent dispute resolution (IDR) or forensic bill auditing, commercial health plans rarely pay flat Medicare rates; instead, contracts are tied to a percentage multiplier of Medicare (often ranging from 140% to 220% for primary care office visits), or benchmarked against regional median commercial rates.
+Using a standard commercial multiplier of 175% of the localized Medicare baseline:
+\text{Commercial FMV Benchmark} = \$129.50 \times 1.75 = \mathbf{\$226.63}
+If a provider's billed chargemaster rate for 99214 is $450.00, but the forensic FMV benchmark derived from this regional calculation is $226.63, the disputed overcharge variance is approximately 49.6%—triggering a Critical Overcharge tier under forensic audit guidelines.
